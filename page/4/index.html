@@ -1,0 +1,450 @@
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="把有限的生命投入到无限的卖萌当中去" />
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    analytics: {
+      google: ''
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+
+
+  <title> 纸灰机 </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column 
+   page-home 
+">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">纸灰机</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+  <div id="posts" class="posts-expand">
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/05/13/Python Cookbook 1.1/">
+                每次处理一个字符 - Python Cookbook 1.1
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2013-05-13
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Python/">Python</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h1 id="本节内容">本节内容</h1><p>Python中没有类似与Java中char的数据类型，字符就是一个长度为1的字符串。可以将字符串转成一个由长度为1字符串组成的列表。<br>可以用list来将一个字符串转成一个list:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thelist = <span class="function"><span class="title">list</span><span class="params">(thestring)</span></span></span><br></pre></td></tr></table></figure>
+<p>也可以直接用for循环遍历:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ch <span class="keyword">in</span> thestring:</span><br><span class="line">	<span class="function"><span class="title">do_something_with</span><span class="params">(ch)</span></span></span><br></pre></td></tr></table></figure>
+<p>用列表推导中的for:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">results = [<span class="function"><span class="title">do_something_with</span><span class="params">(ch)</span></span> <span class="keyword">for</span> ch <span class="keyword">in</span> thestring]</span><br></pre></td></tr></table></figure>
+<p>用内建的map函数也可以完成取一个字符就处理一个的目的:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">results = <span class="function"><span class="title">map</span><span class="params">(do_something, thestring)</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="本节示例代码">本节示例代码</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">magic_chars = <span class="function"><span class="title">set</span><span class="params">(<span class="string">'abracadabra'</span>)</span></span></span><br><span class="line">poppins_chars = <span class="function"><span class="title">set</span><span class="params">(<span class="string">'supercallfragilisticexpialidocious'</span>)</span></span></span><br><span class="line"></span><br><span class="line">print <span class="string">''</span>.<span class="function"><span class="title">join</span><span class="params">(magic_chars &amp; poppins_chars)</span></span></span><br></pre></td></tr></table></figure>
+<p>输出:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acrd</span><br></pre></td></tr></table></figure>
+<h1 id="知识点">知识点</h1><ol>
+<li><p>map的用法：</p>
+<blockquote>
+<p>map(function, iterable, …)<br>Apply function to every item of iterable and return a list of the results. If additional iterable arguments are passed, function must take that many arguments and is applied to the items from all iterables in parallel. If one iterable is shorter than another it is assumed to be extended with None items. If function is None, the identity function is assumed; if there are multiple arguments, map() returns a list consisting of tuples containing the corresponding items from all iterables (a kind of transpose operation). The iterable arguments may be a sequence or any iterable object; the result is always a list.</p>
+</blockquote>
+<p> map会将第二个和后面的对象同时遍历，各取出一个元素并将他们当做方法的多个参数传给方法。所以方法名（第一个参数）后面可遍历对象的数量要和执行方法的参数个数相同，而且可遍历对象的长度必须相同，返回的结果是由方法返回值组成的列表。</p>
+</li>
+<li><p>两个set可以用&amp;来取交集</p>
+</li>
+</ol>
+<h1 id="练习">练习</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def <span class="function"><span class="title">upcase</span><span class="params">(c, d)</span></span>:</span><br><span class="line">	return c.<span class="function"><span class="title">upper</span><span class="params">()</span></span> + d.<span class="function"><span class="title">upper</span><span class="params">()</span></span></span><br><span class="line"></span><br><span class="line">listA = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>]</span><br><span class="line">listB = [<span class="string">'e'</span>,<span class="string">'f'</span>,<span class="string">'g'</span>,<span class="string">'f'</span>]</span><br><span class="line"></span><br><span class="line">results = <span class="function"><span class="title">map</span><span class="params">(upcase, listA, listB)</span></span></span><br><span class="line">strings = [<span class="string">'AE'</span>, <span class="string">'SD'</span>, <span class="string">'FB'</span>, <span class="string">'CCCC'</span>, <span class="string">'CG'</span>]</span><br><span class="line">print results</span><br><span class="line">print <span class="function"><span class="title">set</span><span class="params">(results)</span></span> &amp; <span class="function"><span class="title">set</span><span class="params">(strings)</span></span></span><br></pre></td></tr></table></figure>
+<p>输出结果:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'AE'</span>, <span class="string">'BF'</span>, <span class="string">'CG'</span>, <span class="string">'DF'</span>]</span><br><span class="line"><span class="function"><span class="title">set</span><span class="params">([<span class="string">'AE'</span>, <span class="string">'CG'</span>])</span></span></span><br></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/05/12/learn python in the hard way/">
+                Learn Python The Hard Way
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2013-05-12
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>Softtek每年都会让员工填一个叫Personality Evaluation的excel表格，翻译过来也就是自我评估。表格里面会列出工作各个方面来让员工为自己打分，比如与客户的沟通，对项目的贡献等等。全部填完后会有一个计算公式给出总的成绩，如果高于8分(总分10)而且leader批准的话就可以涨工资的哦(虽然只有5% TAT)。其中有一个问题是你下一步在技术方面有什么学习的方向？我回答是：Learn a new program language — Python。印象这么深是因为当初根本就懒得学，所以连着两年写的都是这个=。，=。</p>
+<p>说起来想要学Python最开始是因为看了酷壳上的<a href="http://coolshell.cn/articles/4990.html" target="_blank" rel="external">程序员链接技术攻略</a>。上面介绍说程序员应该懂得一门脚本语言，因为脚本语言可以快速的开发出你能用的上的小程序，比较好的两个选择是Python和Ruby。开始时着实在这两个之间犹豫了很久，因为Python语法简洁优雅，而Ruby拥有逼格极高的Ruby-on-Rails在web开发上更有优势，而且我对比了一下的确用Ruby写的网站大多比用Python的逼格高。这就让我陷入了实用性和装13性的选择困境，毕竟装13是人类进步的阶梯嘛。最后还是选择了Python(优雅一直是我的座右铭好嘛)并在京东300减150的活动时怒入4本Python的书：《Python基础教程》、《Python核心编程》、《Python参考手册》和《Python Cookbook》，并让他们在箱子里面成功的躺了2年（Orz）。到后来公司的项目不忙了就突然想起要学它了，首先去<a href="www.codecademy.com">Code Cademy</a>学了一下基本语法，其中Python对列表操作的灵活性和Lambda语句的简洁性惊艳到了我这个苦逼Java党。随后去<a href="https://www.coursera.org" target="_blank" rel="external">Coursera</a>报了几门python相关的课程并粗略的啃完了《Python基础教程》——<em>大家推荐的Python入门书，浅显易懂并且涉及了大部分日常所需的知识点</em>。现在正在看《Python Cookbook》，里面是一些针对特殊任务的代码片段，我会将他们都自己写一遍并发布到自己的主页来，希望可以督促自己的学习，让Python像Java一样成为自己的主力语言。</p>
+<p>在搜索与Python相关的信息的时候发现了这么一个网站<a href="http://learnpythonthehardway.org/" target="_blank" rel="external">learn python the hard way</a>。在里面有么一句话：The Hard Way Is Easier。是的，对于学习来说并没有什么捷径可言，一点一滴的刻苦努力就是最简单的方法。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+  </div>
+
+  
+  <div class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui" />
+          <p class="site-author-name">Garrick Gui</p>
+        </div>
+        <p class="site-description motion-element">把有限的生命投入到无限的卖萌当中去</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+        
+      </div>
+
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp; 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">Garrick Gui</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+
+  
+  
+  
+
+  
+
+
+
+
+  
+  
+
+</body>
+</html>
