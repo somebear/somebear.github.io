@@ -1,13 +1,13 @@
 
  <!DOCTYPE HTML>
-<html lang="zh-Hans">
+<html >
 <head>
   <meta charset="UTF-8">
   
-    <title>如何用dropbox定时备份你的Linux VPS | 纸灰机</title>
+    <title>如何用dropbox定时备份你的Linux VPS | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
-    <meta name="author" content="Garrick Gui">
+    <meta name="author" content="John Doe">
     
     <meta name="description" content="昨天因为手贱把VPS玩坏了，一气之下在没备份的情况下重装了。还连累木木也重新搭了一遍ghost。。。木木我对不起你。。。_(:з」∠)_
 于是觉的应该把自动数据备份提上日程了，备份工具用的是dropbox(似乎也没其他的网盘有linux客户端)。参考的教程在这里，可以直接去原链接或者接着看下面。
@@ -18,7 +18,7 @@
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="guibin1989" />
-    <meta name="twitter:title" content="如何用dropbox定时备份你的Linux VPS | 纸灰机" />
+    <meta name="twitter:title" content="如何用dropbox定时备份你的Linux VPS | Hexo" />
       
     
     
@@ -37,12 +37,12 @@
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="纸灰机" title="纸灰机"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="纸灰机">纸灰机</a></h1>
-				<h2 class="blog-motto">灰呀灰呀</h2>
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
@@ -85,7 +85,7 @@
   </h1>
   <p class="article-author">By
     
-      <a href="www.gandl.me" title="Garrick Gui">Garrick Gui</a>
+      <a href="http://www.gandl.me" title="John Doe">John Doe</a>
     </p>
   <p class="article-time">
     <time datetime="2014-02-07T02:15:00.000Z" itemprop="datePublished">2014-02-07</time>
@@ -112,7 +112,7 @@
 <p>3 解压dropbox，注意解压出来的是隐藏文件夹<strong>.dropbox-dist</strong></p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xzvf dropbox<span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
 <p>第一次运行生成host_id</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.dropbox-dist/dropboxd</span> &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.dropbox-dist/dropboxd</span> &amp;</span><br></pre></td></tr></table></figure>
 <p>运行之后终端会不断输出用来将dropbox和你的VPS进行绑定的url</p>
 <p>{<1>}<img src="http://gandl.qiniudn.com/dropboxbindvps.png" alt="绑定url"></1></p>
 <p>复制url在浏览器打开，然后输入你的dropbox帐号和密码完成绑定。</p>
@@ -120,7 +120,7 @@
 <p>dropbox会自动在你的主目录下创建一个<strong>Dropbox</strong>文件夹，通过ln软链接你所有要备份的目录来进行备份。为了方便我备份了整个ghost文件夹。。。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Dropbox/</span><br><span class="line">ln <span class="operator">-s</span> ~/software/ghost/</span><br></pre></td></tr></table></figure>
 <p>然后开始执行同步</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.dropbox-dist/dropboxd</span> &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.dropbox-dist/dropboxd</span> &amp;</span><br></pre></td></tr></table></figure>
 <p>一会儿就同步完啦</p>
 <p>5 注意到现在为止开启的都是自动同步，dropbox是一直运行的。同步会占用很大的内存，所以我们要添加一个同步任务，只在半夜人少的时候同步</p>
 <p>先杀掉同步进程</p>
@@ -158,7 +158,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="www.gandl.me/2014/02/07/如何用dropbox定时备份你的Linux VPS/" data-title="如何用dropbox定时备份你的Linux VPS | 纸灰机" data-tsina="null" class="share clearfix">
+  <div data-url="http://www.gandl.me/2014/02/07/如何用dropbox定时备份你的Linux VPS/" data-title="如何用dropbox定时备份你的Linux VPS | Hexo" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -302,7 +302,7 @@
 	</div>
 		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 		
-		<a href="www.gandl.me" target="_blank" title="Garrick Gui">Garrick Gui</a>
+		<a href="http://www.gandl.me" target="_blank" title="John Doe">John Doe</a>
 		
 		</p>
 </div>

@@ -1,13 +1,13 @@
 
  <!DOCTYPE HTML>
-<html lang="zh-Hans">
+<html >
 <head>
   <meta charset="UTF-8">
   
-    <title>将字符串逐字符或逐词反转 - Python Cookbook 1.7 | 纸灰机</title>
+    <title>将字符串逐字符或逐词反转 - Python Cookbook 1.7 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
-    <meta name="author" content="Garrick Gui">
+    <meta name="author" content="John Doe">
     
     <meta name="description" content="本节内容由于字符串无法改变，所以反转一个字符串需要创建一个拷贝。最简单的方法就是用步长为-1的切片方法，这样可以立即产生一个完全反转的效果：
 1revchars = astring[::-1]
@@ -17,7 +17,7 @@
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="guibin1989" />
-    <meta name="twitter:title" content="将字符串逐字符或逐词反转 - Python Cookbook 1.7 | 纸灰机" />
+    <meta name="twitter:title" content="将字符串逐字符或逐词反转 - Python Cookbook 1.7 | Hexo" />
       
     
     
@@ -36,12 +36,12 @@
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="纸灰机" title="纸灰机"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="纸灰机">纸灰机</a></h1>
-				<h2 class="blog-motto">灰呀灰呀</h2>
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
@@ -84,7 +84,7 @@
   </h1>
   <p class="article-author">By
     
-      <a href="www.gandl.me" title="Garrick Gui">Garrick Gui</a>
+      <a href="http://www.gandl.me" title="John Doe">John Doe</a>
     </p>
   <p class="article-time">
     <time datetime="2013-05-18T16:00:00.000Z" itemprop="datePublished">2013-05-19</time>
@@ -111,7 +111,7 @@
 <p>注意最后的为空字符串，因为空格也被保存在revwords序列表中：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">revwords = re.split(<span class="string">r'(\s+)'</span>, <span class="string">'To be or not to be'</span>)</span><br><span class="line">revwords.reverse()</span><br><span class="line"><span class="keyword">print</span> <span class="string">'size: '</span> + str(len(revwords))</span><br><span class="line"><span class="keyword">print</span> revwords</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">size</span>:<span class="value"> <span class="number">11</span></span><br><span class="line">[<span class="string">'be'</span>, <span class="string">' '</span>, <span class="string">'to'</span>, <span class="string">' '</span>, <span class="string">'not'</span>, <span class="string">' '</span>, <span class="string">'or'</span>, <span class="string">' '</span>, <span class="string">'be'</span>, <span class="string">' '</span>, <span class="string">'To'</span>]</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">size</span>: <span class="number">11</span></span><br><span class="line">[<span class="string">'be'</span>, <span class="string">' '</span>, <span class="string">'to'</span>, <span class="string">' '</span>, <span class="string">'not'</span>, <span class="string">' '</span>, <span class="string">'or'</span>, <span class="string">' '</span>, <span class="string">'be'</span>, <span class="string">' '</span>, <span class="string">'To'</span>]</span><br></pre></td></tr></table></figure>
 <h1 id="知识点">知识点</h1><p>内建函数reversed()可以代替逐词反转的切片指示符[::-1]</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">revwords = <span class="string">' '</span>.<span class="function"><span class="title">join</span><span class="params">(reversed(astring.split()</span></span>))</span><br></pre></td></tr></table></figure>
 <p>但是由于reversed()返回的是一个迭代器(iterator)，所以对于逐字反转来说[::-1]还是最好的方式，否则需要使用join来连接迭代器中的值。</p>
@@ -136,7 +136,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="www.gandl.me/2013/05/19/Python Cookbook 1.7/" data-title="将字符串逐字符或逐词反转 - Python Cookbook 1.7 | 纸灰机" data-tsina="null" class="share clearfix">
+  <div data-url="http://www.gandl.me/2013/05/19/Python Cookbook 1.7/" data-title="将字符串逐字符或逐词反转 - Python Cookbook 1.7 | Hexo" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -280,7 +280,7 @@
 	</div>
 		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 		
-		<a href="www.gandl.me" target="_blank" title="Garrick Gui">Garrick Gui</a>
+		<a href="http://www.gandl.me" target="_blank" title="John Doe">John Doe</a>
 		
 		</p>
 </div>

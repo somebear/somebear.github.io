@@ -1,13 +1,13 @@
 
  <!DOCTYPE HTML>
-<html lang="zh-Hans">
+<html >
 <head>
   <meta charset="UTF-8">
   
-    <title>字符和字符值之间的转换 - Python Cookbook 1.2 | 纸灰机</title>
+    <title>字符和字符值之间的转换 - Python Cookbook 1.2 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
-    <meta name="author" content="Garrick Gui">
+    <meta name="author" content="John Doe">
     
     <meta name="description" content="本节内容Python的内建函数可以实现字符和相应ASCII码的转换。
 ord用来将字符转成ASCII码
@@ -20,7 +20,7 @@ chr用来将ASCII码转成字符
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="guibin1989" />
-    <meta name="twitter:title" content="字符和字符值之间的转换 - Python Cookbook 1.2 | 纸灰机" />
+    <meta name="twitter:title" content="字符和字符值之间的转换 - Python Cookbook 1.2 | Hexo" />
       
     
     
@@ -39,12 +39,12 @@ chr用来将ASCII码转成字符
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="纸灰机" title="纸灰机"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="纸灰机">纸灰机</a></h1>
-				<h2 class="blog-motto">灰呀灰呀</h2>
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
@@ -87,7 +87,7 @@ chr用来将ASCII码转成字符
   </h1>
   <p class="article-author">By
     
-      <a href="www.gandl.me" title="Garrick Gui">Garrick Gui</a>
+      <a href="http://www.gandl.me" title="John Doe">John Doe</a>
     </p>
   <p class="article-time">
     <time datetime="2013-05-13T16:00:00.000Z" itemprop="datePublished">2013-05-14</time>
@@ -110,14 +110,14 @@ chr用来将ASCII码转成字符
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print <span class="function"><span class="title">chr</span><span class="params">(<span class="number">97</span>)</span></span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 <h2 id="例子">例子</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="keyword">map</span>(<span class="keyword">ord</span>, <span class="string">"ciao"</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">''</span>.<span class="keyword">join</span>(<span class="keyword">map</span>(<span class="keyword">chr</span>, range(<span class="number">97</span>,<span class="number">100</span>)))</span><br></pre></td></tr></table></figure>
 <p>输出结果:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr_selector">[99, 105, 97, 111]</span></span><br><span class="line"><span class="tag">abc</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">99</span>, <span class="number">105</span>, <span class="number">97</span>, <span class="number">111</span>]</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
 <h2 id="知识点">知识点</h2><ol>
 <li>用chr可以将一个ASCII码转化成字符</li>
 <li>用ord可以获得一个字符的ASCII码</li>
 </ol>
 <h2 id="练习">练习</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chars = [<span class="function"><span class="title">chr</span><span class="params">(x)</span></span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">97</span>,<span class="number">100</span>)</span></span>]</span><br><span class="line">print chars</span><br><span class="line">print <span class="string">"==============="</span></span><br><span class="line"><span class="keyword">for</span> ch <span class="keyword">in</span> chars:</span><br><span class="line">    print <span class="function"><span class="title">ord</span><span class="params">(ch)</span></span></span><br></pre></td></tr></table></figure>
 <p>输出结果:</p>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line">===============</span><br><span class="line"><span class="number">97</span></span><br><span class="line"><span class="number">98</span></span><br><span class="line"><span class="number">99</span></span><br></pre></td></tr></table></figure>  
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line">===============</span><br><span class="line"><span class="number">97</span></span><br><span class="line"><span class="number">98</span></span><br><span class="line"><span class="number">99</span></span><br></pre></td></tr></table></figure>  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -136,7 +136,7 @@ chr用来将ASCII码转成字符
 
 <div class="article-share" id="share">
 
-  <div data-url="www.gandl.me/2013/05/14/Python Cookbook 1.2/" data-title="字符和字符值之间的转换 - Python Cookbook 1.2 | 纸灰机" data-tsina="null" class="share clearfix">
+  <div data-url="http://www.gandl.me/2013/05/14/Python Cookbook 1.2/" data-title="字符和字符值之间的转换 - Python Cookbook 1.2 | Hexo" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -280,7 +280,7 @@ chr用来将ASCII码转成字符
 	</div>
 		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 		
-		<a href="www.gandl.me" target="_blank" title="Garrick Gui">Garrick Gui</a>
+		<a href="http://www.gandl.me" target="_blank" title="John Doe">John Doe</a>
 		
 		</p>
 </div>

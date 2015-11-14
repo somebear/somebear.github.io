@@ -1,13 +1,13 @@
 
  <!DOCTYPE HTML>
-<html lang="zh-Hans">
+<html >
 <head>
   <meta charset="UTF-8">
   
-    <title>Algorithms - Karatsuba Mutiplication | 纸灰机</title>
+    <title>Algorithms - Karatsuba Mutiplication | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
-    <meta name="author" content="Garrick Gui">
+    <meta name="author" content="John Doe">
     
     <meta name="description" content="算法简介Karatsuba Mutiplication算法可以快速的将两个n位的整数的乘积算出。对于大整数来说计算速度优于学校教授的传统计算方法。
 算法步骤预备将n位的整数平均分为前后两个部分，假设第一个整数前半部分为a，后半部分为b，第二个整数分为c和d。
@@ -19,7 +19,7 @@
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="guibin1989" />
-    <meta name="twitter:title" content="Algorithms - Karatsuba Mutiplication | 纸灰机" />
+    <meta name="twitter:title" content="Algorithms - Karatsuba Mutiplication | Hexo" />
       
     
     
@@ -38,12 +38,12 @@
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="纸灰机" title="纸灰机"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="纸灰机">纸灰机</a></h1>
-				<h2 class="blog-motto">灰呀灰呀</h2>
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
@@ -86,7 +86,7 @@
   </h1>
   <p class="article-author">By
     
-      <a href="www.gandl.me" title="Garrick Gui">Garrick Gui</a>
+      <a href="http://www.gandl.me" title="John Doe">John Doe</a>
     </p>
   <p class="article-time">
     <time datetime="2013-07-14T16:00:00.000Z" itemprop="datePublished">2013-07-15</time>
@@ -115,9 +115,9 @@
 <p>将x均分成a和b: a= 56, b= 78<br>将y均分成c和d: c= 12, d= 34</p>
 <p>r1 = a*c = 56*12 = 672<br>r2 = b*d = 78*34 = 2652<br>r3 = (a+b)*(c+d) = (56+78)*(12+34) = 134*46 = 6164<br>r4 = r3 - r2 - r1 = 6164 - 2652 - 672 = 2840<br>计算结果为 672*10^4 + 2652 + 2840*10^2 = 6720000 + 2652 + 284000 = 7006652</p>
 <h1 id="原理和证明">原理和证明</h1><p>对于n位的整数x和y，我们可以将其看成是:</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = a\*<span class="number">10</span>^<span class="comment">(n/2)</span> + b 	<span class="title">#如：5678</span> = <span class="number">5600</span> + <span class="number">78</span> = <span class="number">56</span>*<span class="number">10</span>^<span class="number">2</span> + <span class="number">78</span></span><br><span class="line">y = c\*<span class="number">10</span>^<span class="comment">(n/2)</span> + d</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = a\*<span class="number">10</span>^(n/<span class="number">2</span>) + b 	<span class="preprocessor">#如：<span class="number">5678</span> = <span class="number">5600</span> + <span class="number">78</span> = <span class="number">56</span>*<span class="number">10</span>^<span class="number">2</span> + <span class="number">78</span></span></span><br><span class="line">y = c\*<span class="number">10</span>^(n/<span class="number">2</span>) + d</span><br></pre></td></tr></table></figure>
 <p>我们要计算x*y，即:</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x * <span class="literal">y</span></span><br><span class="line">=(a*10^(<span class="keyword">n</span>/2)+b) * (c*10^(<span class="keyword">n</span>/2)+<span class="keyword">d</span>)</span><br><span class="line">=10^<span class="keyword">n</span>*<span class="keyword">ac</span> + 10^(<span class="keyword">n</span>/2)*(ad+bc) + bd</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x * y</span><br><span class="line">=(a*<span class="number">10</span>^(n/<span class="number">2</span>)+b) * (c*<span class="number">10</span>^(n/<span class="number">2</span>)+d)</span><br><span class="line">=<span class="number">10</span>^n*ac + <span class="number">10</span>^(n/<span class="number">2</span>)*(ad+bc) + bd</span><br></pre></td></tr></table></figure>
 <p>到此我们需要计算4个乘法即ac, ad, bc, bd。这时如果发现a*c仍然是大整数相乘，还可以将a*c用Karatsuba算法计算，同理如果a*c的乘法子项依然过大我们还可以继续使用该算法计算，因此在程序实现阶段我们是用的是递归。由于递归的函数的主体是乘法部分所以我们应该尽量减少乘法的次数。于是有了优化的版本，因为我们已经有了ac和bd的值，ad+bc就可以用(a+b)*(c+d)-ac-bd来算出，即步骤3和步骤4做的事情:</p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(a+<span class="keyword">b)*(c+d) </span>- ac - <span class="keyword">bd</span><br><span class="line"></span><span class="label">=ac</span> + ad + <span class="keyword">bc </span>+ <span class="keyword">bd </span>- ac - <span class="keyword">bd</span><br><span class="line"></span><span class="label">=ad</span> + <span class="keyword">bc</span></span><br></pre></td></tr></table></figure>
 <p>这样我们就只用计算3次乘法了。</p>
@@ -135,7 +135,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="www.gandl.me/2013/07/15/Algorithms - Karatsuba Mutiplication/" data-title="Algorithms - Karatsuba Mutiplication | 纸灰机" data-tsina="null" class="share clearfix">
+  <div data-url="http://www.gandl.me/2013/07/15/Algorithms - Karatsuba Mutiplication/" data-title="Algorithms - Karatsuba Mutiplication | Hexo" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -279,7 +279,7 @@
 	</div>
 		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 		
-		<a href="www.gandl.me" target="_blank" title="Garrick Gui">Garrick Gui</a>
+		<a href="http://www.gandl.me" target="_blank" title="John Doe">John Doe</a>
 		
 		</p>
 </div>

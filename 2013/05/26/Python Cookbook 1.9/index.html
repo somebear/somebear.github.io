@@ -1,13 +1,13 @@
 
  <!DOCTYPE HTML>
-<html lang="zh-Hans">
+<html >
 <head>
   <meta charset="UTF-8">
   
-    <title>简化字符串的translate方法的使用 - Python Cookbook 1.9 | 纸灰机</title>
+    <title>简化字符串的translate方法的使用 - Python Cookbook 1.9 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
-    <meta name="author" content="Garrick Gui">
+    <meta name="author" content="John Doe">
     
     <meta name="description" content="本节内容将translate方法做一个简单的闭包，用来简化其使用流程。
 1234567891011import stringdef translator(frm=&#39;&#39;, to=&#39;&#39;, delete=&#39;&#39;, keep=None):	if len(to) = 1:		to = to * len(frm)">
@@ -16,7 +16,7 @@
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="guibin1989" />
-    <meta name="twitter:title" content="简化字符串的translate方法的使用 - Python Cookbook 1.9 | 纸灰机" />
+    <meta name="twitter:title" content="简化字符串的translate方法的使用 - Python Cookbook 1.9 | Hexo" />
       
     
     
@@ -35,12 +35,12 @@
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="纸灰机" title="纸灰机"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="纸灰机">纸灰机</a></h1>
-				<h2 class="blog-motto">灰呀灰呀</h2>
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
@@ -83,7 +83,7 @@
   </h1>
   <p class="article-author">By
     
-      <a href="www.gandl.me" title="Garrick Gui">Garrick Gui</a>
+      <a href="http://www.gandl.me" title="John Doe">John Doe</a>
     </p>
   <p class="article-time">
     <time datetime="2013-05-25T16:00:00.000Z" itemprop="datePublished">2013-05-26</time>
@@ -104,11 +104,11 @@
 <p>选出指定集合的字符：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">digit_only = <span class="function"><span class="title">translator</span><span class="params">(keep=string.digits)</span></span></span><br><span class="line">print <span class="function"><span class="title">digit_only</span><span class="params">(<span class="string">'Chiris Perkins : 224-7992'</span>)</span></span></span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2247992</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2247992</span></span><br></pre></td></tr></table></figure>
 <p>移除属于某字符集合的元素：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">no_digits = <span class="function"><span class="title">translator</span><span class="params">(delete=string.digits)</span></span></span><br><span class="line">print <span class="function"><span class="title">no_digits</span><span class="params">(<span class="string">'Chris Perkins : 224-7992'</span>)</span></span></span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">Chris</span> <span class="rule"><span class="attribute">Perkins </span>:<span class="value"> -</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chris <span class="string">Perkins :</span> -</span><br></pre></td></tr></table></figure>
 <p>用某个字符替换属于某指定集合的字符：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">digits_to_hash = <span class="function"><span class="title">translator</span><span class="params">(frm=string.digits, to=<span class="string">'#'</span>)</span></span></span><br><span class="line">print <span class="function"><span class="title">digits_to_hash</span><span class="params">(<span class="string">'Chris Perkins : 224-7992'</span>)</span></span></span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
@@ -135,7 +135,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="www.gandl.me/2013/05/26/Python Cookbook 1.9/" data-title="简化字符串的translate方法的使用 - Python Cookbook 1.9 | 纸灰机" data-tsina="null" class="share clearfix">
+  <div data-url="http://www.gandl.me/2013/05/26/Python Cookbook 1.9/" data-title="简化字符串的translate方法的使用 - Python Cookbook 1.9 | Hexo" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -279,7 +279,7 @@
 	</div>
 		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 		
-		<a href="www.gandl.me" target="_blank" title="Garrick Gui">Garrick Gui</a>
+		<a href="http://www.gandl.me" target="_blank" title="John Doe">John Doe</a>
 		
 		</p>
 </div>

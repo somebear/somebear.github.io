@@ -1,13 +1,13 @@
 
  <!DOCTYPE HTML>
-<html lang="zh-Hans">
+<html >
 <head>
   <meta charset="UTF-8">
   
-    <title>检查字符串中是否包含某字符集和中的字符 - Python Cookbook 1.8 | 纸灰机</title>
+    <title>检查字符串中是否包含某字符集和中的字符 - Python Cookbook 1.8 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
-    <meta name="author" content="Garrick Gui">
+    <meta name="author" content="John Doe">
     
     <meta name="description" content="本节内容检查字符串中是否包含某字符集的字符，最简单，通用的办法如下：
 12345def containsAny(seq, aset):	&quot;&quot;&quot;检查序列seq是否含有aset中的项&quot;&quot;&quot;	for c in seq:		if c in aset: return True			return False
@@ -17,7 +17,7 @@
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="guibin1989" />
-    <meta name="twitter:title" content="检查字符串中是否包含某字符集和中的字符 - Python Cookbook 1.8 | 纸灰机" />
+    <meta name="twitter:title" content="检查字符串中是否包含某字符集和中的字符 - Python Cookbook 1.8 | Hexo" />
       
     
     
@@ -36,12 +36,12 @@
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="纸灰机" title="纸灰机"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="纸灰机">纸灰机</a></h1>
-				<h2 class="blog-motto">灰呀灰呀</h2>
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
@@ -84,7 +84,7 @@
   </h1>
   <p class="article-author">By
     
-      <a href="www.gandl.me" title="Garrick Gui">Garrick Gui</a>
+      <a href="http://www.gandl.me" title="John Doe">John Doe</a>
     </p>
   <p class="article-time">
     <time datetime="2013-05-19T16:00:00.000Z" itemprop="datePublished">2013-05-20</time>
@@ -122,7 +122,7 @@
 <h1 id="练习">练习</h1><p>关于itertools.ifilter:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isNum</span><span class="params">(value)</span>:</span></span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		value + <span class="number">1</span></span><br><span class="line">	<span class="keyword">except</span> TypeError:</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> itertools.ifilter(isNum, [<span class="number">1</span>, <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="number">3</span>]):</span><br><span class="line">	<span class="keyword">print</span> item</span><br></pre></td></tr></table></figure>
 <p>输出结果:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
 <p>关于translate和maketrans</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import string</span><br><span class="line"></span><br><span class="line">trans = string.<span class="function"><span class="title">maketrans</span><span class="params">(<span class="string">'bcdf'</span>, <span class="string">'BCDF'</span>)</span></span></span><br><span class="line">str = <span class="string">"oh, what a good day!"</span></span><br><span class="line">print str.<span class="function"><span class="title">translate</span><span class="params">(trans, <span class="string">'aeiou'</span>)</span></span></span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
@@ -145,7 +145,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="www.gandl.me/2013/05/20/Python Cookbook 1.8/" data-title="检查字符串中是否包含某字符集和中的字符 - Python Cookbook 1.8 | 纸灰机" data-tsina="null" class="share clearfix">
+  <div data-url="http://www.gandl.me/2013/05/20/Python Cookbook 1.8/" data-title="检查字符串中是否包含某字符集和中的字符 - Python Cookbook 1.8 | Hexo" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -289,7 +289,7 @@
 	</div>
 		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 		
-		<a href="www.gandl.me" target="_blank" title="Garrick Gui">Garrick Gui</a>
+		<a href="http://www.gandl.me" target="_blank" title="John Doe">John Doe</a>
 		
 		</p>
 </div>
