@@ -1,1240 +1,406 @@
-<!doctype html>
-<html class="theme-next use-motion theme-next-mist">
+
+ <!DOCTYPE HTML>
+<html >
 <head>
+  <meta charset="UTF-8">
   
+    <title>纸灰机</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Garrick Gui">
+    
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="guibin1989" />
+    <meta name="twitter:title" content="纸灰机" />
+      
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="纸灰机" title="纸灰机"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="纸灰机">纸灰机</a></h1>
+				<h2 class="blog-motto">灰呀灰呀</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/projects">Projects</a></li>
+					
+						<li><a href="/imdb250">IMDB250</a></li>
+					
+						<li><a href="/reading">Books</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:www.gandl.me">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main">
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/06/03/Python Cookbook 1.11/" title="检查一个字符串是文本还是二进制 - Python Cookbook 1.11" itemprop="url">
+  
+    <h1 itemprop="name">检查一个字符串是文本还是二进制 - Python Cookbook 1.11</h1>
+    
+     
+           <p itemprop="description" >本节内容要探知一个字符串中的数据究竟是文本还是二进制，并没有一个精准的算法。我们可以用Perl的判定方法，如果字符串包含了空值或者其中有超过30%的字符的高位被置1（意味着该字符的码值大于126）或是奇怪的控制码，我们就认为这段数据是二进制数据。
+例子12345678910111</p>
+        
+    
+    <time datetime="2013-06-02T16:00:00.000Z" itemprop="datePublished">2013-06-03</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/05/30/Python Cookbook 1.10/" title="过滤字符串中不属于指定集合的字符 - Python Cookbook 1.10" itemprop="url">
+  
+    <h1 itemprop="name">过滤字符串中不属于指定集合的字符 - Python Cookbook 1.10</h1>
+    
+     
+           <p itemprop="description" >本节内容给定一个需要保留的字符的集合，构建一个过滤函数，并可将其应用与任何字符串s，函数返回一个s的拷贝，该拷贝只包含指定字符集合的元素。用string对象的translate可以很快的解决这个问题。
+例子123456789101112131415161718192021#cod</p>
+        
+    
+    <time datetime="2013-05-29T16:00:00.000Z" itemprop="datePublished">2013-05-30</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/05/26/Python Cookbook 1.9/" title="简化字符串的translate方法的使用 - Python Cookbook 1.9" itemprop="url">
+  
+    <h1 itemprop="name">简化字符串的translate方法的使用 - Python Cookbook 1.9</h1>
+    
+     
+           <p itemprop="description" >本节内容将translate方法做一个简单的闭包，用来简化其使用流程。
+1234567891011import stringdef translator(frm=&#39;&#39;, to=&#39;&#39;, delete=&#39;&#39;, keep=None):	if len(to) = 1:		to = to </p>
+        
+    
+    <time datetime="2013-05-25T16:00:00.000Z" itemprop="datePublished">2013-05-26</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/05/20/Python Cookbook 1.8/" title="检查字符串中是否包含某字符集和中的字符 - Python Cookbook 1.8" itemprop="url">
+  
+    <h1 itemprop="name">检查字符串中是否包含某字符集和中的字符 - Python Cookbook 1.8</h1>
+    
+     
+           <p itemprop="description" >本节内容检查字符串中是否包含某字符集的字符，最简单，通用的办法如下：
+12345def containsAny(seq, aset):	&quot;&quot;&quot;检查序列seq是否含有aset中的项&quot;&quot;&quot;	for c in seq:		if c in aset: return True			retu</p>
+        
+    
+    <time datetime="2013-05-19T16:00:00.000Z" itemprop="datePublished">2013-05-20</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/05/19/Python Cookbook 1.7/" title="将字符串逐字符或逐词反转 - Python Cookbook 1.7" itemprop="url">
+  
+    <h1 itemprop="name">将字符串逐字符或逐词反转 - Python Cookbook 1.7</h1>
+    
+     
+           <p itemprop="description" >本节内容由于字符串无法改变，所以反转一个字符串需要创建一个拷贝。最简单的方法就是用步长为-1的切片方法，这样可以立即产生一个完全反转的效果：
+1revchars = astring[::-1]
+如果要逐词反转，我们需要一个单词的列表，将这个列表反转，再用join方法将其合并，并在</p>
+        
+    
+    <time datetime="2013-05-18T16:00:00.000Z" itemprop="datePublished">2013-05-19</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/05/18/Python Cookbook 1.6/" title="合并字符串 - Python Cookbook 1.6" itemprop="url">
+  
+    <h1 itemprop="name">合并字符串 - Python Cookbook 1.6</h1>
+    
+     
+           <p itemprop="description" >本节内容有时我们需要将一些小的字符串拼接成一个大的字符串。Python提供以下方法来实现这个功能：
+
+用+操作符或者+=拼接
+
+1largeString = small1 + small2 + &#39; something &#39; + smaill3 + &#39; yet more&#39;
+
+用和+操</p>
+        
+    
+    <time datetime="2013-05-17T16:00:00.000Z" itemprop="datePublished">2013-05-18</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/05/17/Python Cookbook 1.5/" title="去除字符串两端的空格 - Python Cookbook 1.5" itemprop="url">
+  
+    <h1 itemprop="name">去除字符串两端的空格 - Python Cookbook 1.5</h1>
+    
+     
+           <p itemprop="description" >本节内容字符串对象的lstrip, rstrip和strip可以用来去掉字符串的开头，末尾和两端的空格。这些方法都不需要参数，返回的是经过处理的原字符串的拷贝。
+例子12x = &#39;    hej   &#39;print &#39;|&#39;, x.lstrip(), &#39;|&#39;, x.rstrip(),</p>
+        
+    
+    <time datetime="2013-05-16T16:00:00.000Z" itemprop="datePublished">2013-05-17</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/05/16/Python Cookbook 1.4/" title="字符串对齐 - Python Cookbook 1.4" itemprop="url">
+  
+    <h1 itemprop="name">字符串对齐 - Python Cookbook 1.4</h1>
+    
+     
+           <p itemprop="description" >本节内容例子1print &#39;|&#39;, &#39;hej&#39;.ljust(20), &#39;|&#39;, &#39;hej&#39;.rjust(20), &#39;|&#39;, &#39;hej&#39;.center(20), &#39;|&#39;
+输出结果：
+1| hej                  |                  hej |  </p>
+        
+    
+    <time datetime="2013-05-15T16:00:00.000Z" itemprop="datePublished">2013-05-16</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/05/15/Python Cookbook 1.3/" title="测试一个对象是否是类字符串 - Python Cookbook 1.3" itemprop="url">
+  
+    <h1 itemprop="name">测试一个对象是否是类字符串 - Python Cookbook 1.3</h1>
+    
+     
+           <p itemprop="description" >本节内容有时候需要测试一个对象或者函数方法的参数是否为字符串，利用内建的isinstance和basestring可以简单快速的检查某个对象是否是字符串或者Unicode对象。方法如下：
+12def isAString(anobj):	return isinstance(anob</p>
+        
+    
+    <time datetime="2013-05-14T16:00:00.000Z" itemprop="datePublished">2013-05-15</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2013/05/14/Python Cookbook 1.2/" title="字符和字符值之间的转换 - Python Cookbook 1.2" itemprop="url">
+  
+    <h1 itemprop="name">字符和字符值之间的转换 - Python Cookbook 1.2</h1>
+    
+     
+           <p itemprop="description" >本节内容Python的内建函数可以实现字符和相应ASCII码的转换。
+ord用来将字符转成ASCII码
+12&amp;gt;&amp;gt;&amp;gt; print ord(&#39;a&#39;)97
+chr用来将ASCII码转成字符
+12&amp;gt;&amp;gt;&amp;gt; print chr(97)a
+例子12print</p>
+        
+    
+    <time datetime="2013-05-13T16:00:00.000Z" itemprop="datePublished">2013-05-14</time>
+  </a>
+</section>
 
 
+  <nav id="page-nav" class="clearfix">
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+  </nav>
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分類</p>
+		<ul>
+		
+			<li><a href="/categories/Python/" title="Python">Python<sup>13</sup></a></li>
+		
+			<li><a href="/categories/iOS/" title="iOS">iOS<sup>3</sup></a></li>
+		
+			<li><a href="/categories/life/" title="life">life<sup>8</sup></a></li>
+		
+			<li><a href="/categories/好玩的/" title="好玩的">好玩的<sup>1</sup></a></li>
+		
+			<li><a href="/categories/开点脑洞/" title="开点脑洞">开点脑洞<sup>1</sup></a></li>
+		
+		</ul>
+</div>
 
 
+  
+<div class="tagslist">
+	<p class="asidetitle">標簽</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/22世纪百科全书/" title="22世纪百科全书">22世纪百科全书<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Algorithms/" title="Algorithms">Algorithms<sup>1</sup></a></li>
+		
+			<li><a href="/tags/G-L-Money/" title="G&amp;L Money">G&amp;L Money<sup>1</sup></a></li>
+		
+			<li><a href="/tags/OS-X/" title="OS X">OS X<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Python/" title="Python">Python<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Python-Cookbook/" title="Python Cookbook">Python Cookbook<sup>12</sup></a></li>
+		
+			<li><a href="/tags/Python参考手册/" title="Python参考手册">Python参考手册<sup>1</sup></a></li>
+		
+			<li><a href="/tags/TED/" title="TED">TED<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Untrasted/" title="Untrasted">Untrasted<sup>1</sup></a></li>
+		
+			<li><a href="/tags/VPS/" title="VPS">VPS<sup>1</sup></a></li>
+		
+			<li><a href="/tags/iOS小知识/" title="iOS小知识">iOS小知识<sup>1</sup></a></li>
+		
+			<li><a href="/tags/家有贱猫/" title="家有贱猫">家有贱猫<sup>1</sup></a></li>
+		
+			<li><a href="/tags/心情/" title="心情">心情<sup>1</sup></a></li>
+		
+			<li><a href="/tags/扯淡/" title="扯淡">扯淡<sup>2</sup></a></li>
+		
+			<li><a href="/tags/杂记/" title="杂记">杂记<sup>3</sup></a></li>
+		
+			<li><a href="/tags/疑难杂症/" title="疑难杂症">疑难杂症<sup>1</sup></a></li>
+		
+			<li><a href="/tags/看点电影/" title="看点电影">看点电影<sup>1</sup></a></li>
+		
+			<li><a href="/tags/随笔/" title="随笔">随笔<sup>3</sup></a></li>
+		
+		</ul>
+</div>
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 訂閱</a>
+</div>
 
-
-
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
-
-
-
-
-  <meta name="keywords" content="iOS,tech,guibin" />
-
-
-
-
-
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var CONFIG = {
-    scheme: 'Mist',
-    analytics: {
-      google: ''
-    },
-    sidebar: 'post'
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，旅行者，欢迎来到我的博客 <br/>
+			这里的更新非常缓慢，请不要太过期待</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/guibin1989" target="_blank" title="weibo"></a>
+		
+		
+		<a href="https://twitter.com/guibin1989" target="_blank" title="twitter"></a>
+		
+		
+		<a href="https://github.com/guibin1989" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://www.gandl.me" target="_blank" title="Garrick Gui">Garrick Gui</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
   };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
 </script>
 
 
 
 
-  <title> 纸灰机 </title>
-</head>
 
-<body>
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
 
-  <div class="container one-column 
-   page-home 
-">
-    <div class="headband"></div>
 
-    <div id="header" class="header">
-      <div class="header-inner">
-        <h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand">
-      <span class="logo">
-        <i class="icon-logo"></i>
-      </span>
-      <span class="site-title">纸灰机</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<div class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu ">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/">
-            <i class="menu-item-icon icon-home"></i> <br />
-            首頁
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives">
-            <i class="menu-item-icon icon-archives"></i> <br />
-            歸檔
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags">
-            <i class="menu-item-icon icon-tags"></i> <br />
-            標籤
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-projects">
-          <a href="/projects">
-            <i class="menu-item-icon icon-projects"></i> <br />
-            项目
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-movies">
-          <a href="/imdb250">
-            <i class="menu-item-icon icon-movies"></i> <br />
-            电影
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-books">
-          <a href="/reading">
-            <i class="menu-item-icon icon-books"></i> <br />
-            图书
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about">
-            <i class="menu-item-icon icon-about"></i> <br />
-            關於
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-</div>
-
-
-      </div>
-    </div>
-
-    <div id="main" class="main">
-      <div class="main-inner">
-        <div id="content" class="content">
-          
-  <div id="posts" class="posts-expand">
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/06/03/Python Cookbook 1.11/">
-                检查一个字符串是文本还是二进制 - Python Cookbook 1.11
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-06-03
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/06/03/Python Cookbook 1.11/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/06/03/Python Cookbook 1.11/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>要探知一个字符串中的数据究竟是文本还是二进制，并没有一个精准的算法。我们可以用Perl的判定方法，如果字符串包含了空值或者其中有超过30%的字符的高位被置1（意味着该字符的码值大于126）或是奇怪的控制码，我们就认为这段数据是二进制数据。</p>
-<h1 id="例子">例子</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="keyword">from</span> __furture__ <span class="keyword">import</span> division		<span class="comment">#确保/不会截断</span></span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line">text_characters = <span class="string">""</span>.join(map(chr, range(<span class="number">32</span>, <span class="number">127</span>))) + <span class="string">"\n\r\t\b"</span></span><br><span class="line">_null_trans = string.maketrans(<span class="string">""</span>, <span class="string">""</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">istext</span><span class="params">(s, text_characters = text_characters, threshold = <span class="number">0.30</span>)</span>:</span></span><br><span class="line">	<span class="comment"># 若s包含了空值，它不是文本</span></span><br><span class="line">	<span class="keyword">if</span> <span class="string">"\0"</span> <span class="keyword">in</span> s:</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">	<span class="comment"># 一个“空”字符串是“文本”</span></span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">not</span> s:</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">	<span class="comment">#获得s的由非文本字符组构成的字串</span></span><br><span class="line">	t = s.translate(_null_trans, text_characters)</span><br><span class="line">	<span class="comment"># 如果不超过30%的字符是非文本字符，s是字符串</span></span><br><span class="line">	<span class="keyword">print</span> len(t)/len(s)</span><br><span class="line">	<span class="keyword">return</span> len(t)/len(s) &lt;= threshold</span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>很多时候，需要被检查的是一个文件，而不是字符串。可以用上面的方法来检查文件的第一个数据块：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">istextfile</span><span class="params">(filename, blocksize=<span class="number">512</span>, **kwds)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> istext(open(filename).read(blocksize), **kwds)</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/30/Python Cookbook 1.10/">
-                过滤字符串中不属于指定集合的字符 - Python Cookbook 1.10
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-30
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/30/Python Cookbook 1.10/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/30/Python Cookbook 1.10/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>给定一个需要保留的字符的集合，构建一个过滤函数，并可将其应用与任何字符串s，函数返回一个s的拷贝，该拷贝只包含指定字符集合的元素。用string对象的translate可以很快的解决这个问题。</p>
-<h1 id="例子">例子</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"><span class="comment">#生成所有字符的可复用的字符串，它还可以作为</span></span><br><span class="line"><span class="comment">#一个翻译表，指明“无须翻译”</span></span><br><span class="line">allchars = string.maketrans(<span class="string">''</span>,<span class="string">''</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span>  <span class="title">makefilter</span><span class="params">(keep)</span>:</span></span><br><span class="line">	<span class="string">"""返回一个函数，此返回函数接收一个字符串作为参数</span><br><span class="line">	并返回字符串的一个部分拷贝，此拷贝只包含在keep中</span><br><span class="line">	的字符，注意keep必须是一个普通字符串</span><br><span class="line">	"""</span></span><br><span class="line">	<span class="comment">#生成一个所有不在keep中的字符组成的字符串：keep的</span></span><br><span class="line">	<span class="comment">#补集，即所有我们需要删除的字符</span></span><br><span class="line">	delchars = allchars.translate(allchars, keep)</span><br><span class="line">	<span class="comment">#生成并返回需要的过滤函数（作为闭包）</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">thefilter</span><span class="params">(s)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> s.translate(allchars, delchars)</span><br><span class="line">	<span class="keyword">return</span> thefilter</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	just_vowels = makefilter(<span class="string">'aeiouy'</span>)</span><br><span class="line">	<span class="keyword">print</span> just_vowels(<span class="string">'four score and seven years ago'</span>)</span><br><span class="line">	<span class="keyword">print</span> just_vowels(<span class="string">'tiger, tiger burning bright'</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">ouoeaeeyeaao</span></span><br><span class="line">ieieuii</span><br></pre></td></tr></table></figure>
-<h1 id="练习">练习</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br><span class="line">world = string.maketrans(<span class="string">''</span>,<span class="string">''</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Me</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="string">""" I can see nothing, except u """</span></span><br><span class="line">	otherthing = world.translate(world, <span class="string">'u'</span>)</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">see</span><span class="params">(s)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> s.translate(world, otherthing)</span><br><span class="line">	<span class="keyword">return</span> see</span><br><span class="line">see = Me()</span><br><span class="line"><span class="keyword">print</span> see(<span class="string">'people people people people you people people people'</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果:</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">u</span></span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/26/Python Cookbook 1.9/">
-                简化字符串的translate方法的使用 - Python Cookbook 1.9
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-26
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/26/Python Cookbook 1.9/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/26/Python Cookbook 1.9/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>将translate方法做一个简单的闭包，用来简化其使用流程。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translator</span><span class="params">(frm=<span class="string">''</span>, to=<span class="string">''</span>, delete=<span class="string">''</span>, keep=None)</span>:</span></span><br><span class="line">	<span class="keyword">if</span> len(to) = <span class="number">1</span>:</span><br><span class="line">		to = to * len(frm)</span><br><span class="line">	trans = string.maketrans(frm, to)</span><br><span class="line">	<span class="keyword">if</span> keep <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">		allchars = string.maketrans(<span class="string">''</span>,<span class="string">''</span>)</span><br><span class="line">		delete = allchars.translate(allchars, keep.translate(allchars, delete))</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">translate</span><span class="params">(s)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> s.translate(trans, delete)</span><br><span class="line">	<span class="keyword">return</span> translate</span><br></pre></td></tr></table></figure>
-<p>选出指定集合的字符：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">digit_only = <span class="function"><span class="title">translator</span><span class="params">(keep=string.digits)</span></span></span><br><span class="line">print <span class="function"><span class="title">digit_only</span><span class="params">(<span class="string">'Chiris Perkins : 224-7992'</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2247992</span></span><br></pre></td></tr></table></figure>
-<p>移除属于某字符集合的元素：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">no_digits = <span class="function"><span class="title">translator</span><span class="params">(delete=string.digits)</span></span></span><br><span class="line">print <span class="function"><span class="title">no_digits</span><span class="params">(<span class="string">'Chris Perkins : 224-7992'</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chris <span class="string">Perkins :</span> -</span><br></pre></td></tr></table></figure>
-<p>用某个字符替换属于某指定集合的字符：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">digits_to_hash = <span class="function"><span class="title">translator</span><span class="params">(frm=string.digits, to=<span class="string">'#'</span>)</span></span></span><br><span class="line">print <span class="function"><span class="title">digits_to_hash</span><span class="params">(<span class="string">'Chris Perkins : 224-7992'</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chris Perkins : <span class="comment">###-###</span><span class="comment">#</span></span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>闭包(closure)就是一个“内层”的函数，由一个名字（变量）来指代，而这个名字对于“外层”包含它的函数而言，是本地变量。这种返回一个闭包的函数，可以叫做闭包工厂来强调它创建并返回闭包，而不是返回类或者类的实例。</p>
-<h1 id="例子">例子</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sayHello</span><span class="params">(title=<span class="string">''</span>,greeting=<span class="string">''</span>)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">adddetail</span><span class="params">(name)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> <span class="string">'Hello '</span>+title+name+<span class="string">'. '</span>+greeting</span><br><span class="line">	<span class="keyword">return</span> adddetail</span><br><span class="line"></span><br><span class="line">mr = sayHello(title=<span class="string">'Mr. '</span>)</span><br><span class="line"><span class="keyword">print</span> mr(<span class="string">'Gui'</span>)</span><br><span class="line"></span><br><span class="line">morning = sayHello(greeting=<span class="string">'Good morning!'</span>)</span><br><span class="line"><span class="keyword">print</span> morning(<span class="string">'Garrick'</span>)</span><br><span class="line"></span><br><span class="line">hello = sayHello(title=<span class="string">'Mr. '</span>,greeting=<span class="string">'Good day!'</span>)</span><br><span class="line"><span class="keyword">print</span> hello(<span class="string">'Gui'</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">Hello</span> <span class="variable">Mr</span>. <span class="variable">Gui</span>. </span><br><span class="line"><span class="variable">Hello</span> <span class="variable">Garrick</span>. <span class="variable">Good</span> <span class="function_or_atom">morning</span><span class="exclamation_mark">!</span></span><br><span class="line"><span class="variable">Hello</span> <span class="variable">Mr</span>. <span class="variable">Gui</span>. <span class="variable">Good</span> <span class="function_or_atom">day</span><span class="exclamation_mark">!</span></span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/20/Python Cookbook 1.8/">
-                检查字符串中是否包含某字符集和中的字符 - Python Cookbook 1.8
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-20
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/20/Python Cookbook 1.8/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/20/Python Cookbook 1.8/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>检查字符串中是否包含某字符集的字符，最简单，通用的办法如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">containsAny</span><span class="params">(seq, aset)</span>:</span></span><br><span class="line">	<span class="string">"""检查序列seq是否含有aset中的项"""</span></span><br><span class="line">	<span class="keyword">for</span> c <span class="keyword">in</span> seq:</span><br><span class="line">		<span class="keyword">if</span> c <span class="keyword">in</span> aset: <span class="keyword">return</span> <span class="keyword">True</span>		</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
-<p>也可以用itertools模块的方法来提高一点性能：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">containsAny</span><span class="params">(seq, aset)</span>:</span></span><br><span class="line">	<span class="keyword">for</span> item <span class="keyword">in</span> itertools.ifilter(aset.__contains__, seq):</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>这些方法都是属于“短路法”即一旦发现有字符是aset中的项就会立即返回。<br>也可以用set的方法来实现。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">containAny</span><span class="params">(seq, aset)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> bool(set(aset).intersection(seq))</span><br></pre></td></tr></table></figure>
-<p>不过这个方法任何情况都会将seq的每一个成员检查。</p>
-<p>itertools.ifilter要求传入一个断言和一个可以迭代的对象，然后筛选出可迭代对象中满足该断言的所有子项。例子中的aset.<strong>contains</strong>就是一个断言，检查seq的子项是否在aset中。</p>
-<p>将逻辑反过来也可以实现检查一个字符串的所有字符都是一个集合的成员：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">containsOnly</span><span class="params">(seq, aset)</span>:</span></span><br><span class="line">	<span class="keyword">for</span> c <span class="keyword">in</span> seq:</span><br><span class="line">		<span class="keyword">if</span> c <span class="keyword">not</span> <span class="keyword">in</span> aset:</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
-<p>也可以用set的difference方法来实现，任何一个set对象a，a.difference(b)返回a中所有不属于b的元素。这个方法同样会检查每一个成员：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">containsOnly</span><span class="params">(seq, aset)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">not</span> set(aset).difference(seq)</span><br></pre></td></tr></table></figure>
-<p>用字符串的translate和Python标准库中的string.maketrans函数：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br><span class="line">notrans = string.maketrans(<span class="string">''</span>,<span class="string">''</span>)	<span class="comment">#identify "translation"</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">contiansAny</span><span class="params">(astr, strset)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> len(strset) != len(strset.translate(notrans, astr))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">containsAll</span><span class="params">(astr, strset)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">not</span> strset.translate(notrans, astr)</span><br></pre></td></tr></table></figure>
-<p>str.translate的用法：</p>
-<blockquote>
-<p>str.translate(table[, deletechars])<br>Return a copy of the string where all characters occurring in the optional argument deletechars are removed, and the remaining characters have been mapped through the given &gt;translation table, which must be a string of length 256.</p>
-</blockquote>
-<p>简单来说就是将deletechars中的字符，然后按照table里的字符映射关系映射。而maketrans就是生成映射用的table。</p>
-<h1 id="练习">练习</h1><p>关于itertools.ifilter:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isNum</span><span class="params">(value)</span>:</span></span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		value + <span class="number">1</span></span><br><span class="line">	<span class="keyword">except</span> TypeError:</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> itertools.ifilter(isNum, [<span class="number">1</span>, <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="number">3</span>]):</span><br><span class="line">	<span class="keyword">print</span> item</span><br></pre></td></tr></table></figure>
-<p>输出结果:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
-<p>关于translate和maketrans</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import string</span><br><span class="line"></span><br><span class="line">trans = string.<span class="function"><span class="title">maketrans</span><span class="params">(<span class="string">'bcdf'</span>, <span class="string">'BCDF'</span>)</span></span></span><br><span class="line">str = <span class="string">"oh, what a good day!"</span></span><br><span class="line">print str.<span class="function"><span class="title">translate</span><span class="params">(trans, <span class="string">'aeiou'</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function_or_atom">h</span>, <span class="function_or_atom">wht</span>  <span class="function_or_atom">gD</span> <span class="variable">Dy</span><span class="exclamation_mark">!</span></span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/19/Python Cookbook 1.7/">
-                将字符串逐字符或逐词反转 - Python Cookbook 1.7
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-19
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/19/Python Cookbook 1.7/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/19/Python Cookbook 1.7/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>由于字符串无法改变，所以反转一个字符串需要创建一个拷贝。最简单的方法就是用步长为-1的切片方法，这样可以立即产生一个完全反转的效果：</p>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="atom">revchars</span> = <span class="atom">astring</span>[::-<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<p>如果要逐词反转，我们需要一个单词的列表，将这个列表反转，再用join方法将其合并，并在相邻两词之间都插入一个空格：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">revwords = astring.<span class="function"><span class="title">split</span><span class="params">()</span></span> #字符串-&gt;单词列表</span><br><span class="line">revwords.<span class="function"><span class="title">reverse</span><span class="params">()</span></span>			#反转列表</span><br><span class="line"><span class="string">' '</span>.<span class="function"><span class="title">join</span><span class="params">(revwords)</span></span>			#单词列表-&gt;字符串</span><br></pre></td></tr></table></figure>
-<p>或者用一行代码解决：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">revwords = <span class="string">' '</span>.<span class="function"><span class="title">join</span><span class="params">(astring.split()</span></span>[::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
-<p>如果想不改变字符串内的空格，可以用正则表达式来分割原字符串：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">revwords = re.split(<span class="string">r'(\s+)'</span>, astring)</span><br><span class="line">revwords.reverse()</span><br><span class="line">revwords = <span class="string">''</span>.join(revwords)</span><br></pre></td></tr></table></figure>
-<p>注意最后的为空字符串，因为空格也被保存在revwords序列表中：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">revwords = re.split(<span class="string">r'(\s+)'</span>, <span class="string">'To be or not to be'</span>)</span><br><span class="line">revwords.reverse()</span><br><span class="line"><span class="keyword">print</span> <span class="string">'size: '</span> + str(len(revwords))</span><br><span class="line"><span class="keyword">print</span> revwords</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">size</span>: <span class="number">11</span></span><br><span class="line">[<span class="string">'be'</span>, <span class="string">' '</span>, <span class="string">'to'</span>, <span class="string">' '</span>, <span class="string">'not'</span>, <span class="string">' '</span>, <span class="string">'or'</span>, <span class="string">' '</span>, <span class="string">'be'</span>, <span class="string">' '</span>, <span class="string">'To'</span>]</span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>内建函数reversed()可以代替逐词反转的切片指示符[::-1]</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">revwords = <span class="string">' '</span>.<span class="function"><span class="title">join</span><span class="params">(reversed(astring.split()</span></span>))</span><br></pre></td></tr></table></figure>
-<p>但是由于reversed()返回的是一个迭代器(iterator)，所以对于逐字反转来说[::-1]还是最好的方式，否则需要使用join来连接迭代器中的值。</p>
-<h1 id="列子">列子</h1><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="property">words</span> = ''.join(reversed('<span class="keyword">to</span> be <span class="keyword">or</span> <span class="keyword">not</span> <span class="keyword">to</span> be'))</span><br><span class="line">print <span class="property">words</span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">eb</span> ot ton ro eb ot</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/18/Python Cookbook 1.6/">
-                合并字符串 - Python Cookbook 1.6
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-18
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/18/Python Cookbook 1.6/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/18/Python Cookbook 1.6/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>有时我们需要将一些小的字符串拼接成一个大的字符串。Python提供以下方法来实现这个功能：</p>
-<ul>
-<li>用+操作符或者+=拼接</li>
-</ul>
-<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="annotation">small</span><span class="number">1</span> + <span class="annotation">small</span><span class="number">2</span> + <span class="string">' something '</span> + smaill<span class="number">3</span> + <span class="string">' yet more'</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>用和+操作完全等同但却更加漂亮和紧凑的reduce</li>
-</ul>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">import</span> <span class="literal">operator</span></span><br><span class="line">largeString = reduce(<span class="literal">operator</span>.add, pieces, <span class="string">''</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>用字符串格式化操作符%</li>
-</ul>
-<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="string">'%s%s something %s yet more'</span> % (<span class="annotation">small</span><span class="number">1</span>, <span class="annotation">small</span><span class="number">2</span>, <span class="annotation">small</span><span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>用字符串操作符join</li>
-</ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="string">''</span>.<span class="function"><span class="title">join</span><span class="params">(pieces)</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>虽然这4种方法都可以实现字符串合并的目地，但是由于字符串对象是无法改变的。任何对字符串的操作，包括字符串拼接都会产生一个新的字符串对象，而不是修改原有的对象。因为拼接N个字符串将涉及创建并丢弃N-1个中间结果。</p>
-<p>如果有少量字符串（尤其是那些绑定到变量上的）需要拼接，甚至有时还需要添加一些额外的信息，此时最好使用字符串格式化操作符%。性能对这种操作完全不是一个问题。和使用多个+操作符相比，%具有更好地可读性也不必对非字符串调用str方法。另外还可以使用%s之外的其他格式制定符，这样可以实现更多的格式要求，比如浮点数转化为字符串的表示时，可以控制它的有效位数。</p>
-<p>如果有较多的字符串要拼接的话，性能就成了一个很现实的问题。此时应该使用join方法，join会把输入的字符串序列一口吞下，而无须产生子项之间的中间结果，还可以制定子项的连接字符。这是一种快速、整洁、优雅且兼具良好可读性的合并大字符串的方法。无论何时join都是最值得选择的方式。</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/17/Python Cookbook 1.5/">
-                去除字符串两端的空格 - Python Cookbook 1.5
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-17
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/17/Python Cookbook 1.5/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/17/Python Cookbook 1.5/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>字符串对象的lstrip, rstrip和strip可以用来去掉字符串的开头，末尾和两端的空格。这些方法都不需要参数，返回的是经过处理的原字符串的拷贝。</p>
-<h1 id="例子">例子</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">'    hej   '</span></span><br><span class="line">print <span class="string">'|'</span>, x.<span class="function"><span class="title">lstrip</span><span class="params">()</span></span>, <span class="string">'|'</span>, x.<span class="function"><span class="title">rstrip</span><span class="params">()</span></span>, <span class="string">'|'</span>, x.<span class="function"><span class="title">strip</span><span class="params">()</span></span>, <span class="string">'|'</span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> hej    </span>|<span class="string">     hej </span>|<span class="string"> hej </span>|</span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>也可以选择去掉其他字符，只需提供一个字符串作为这3种方法的参数即可：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">'xyxxyy hejyx  yyx'</span></span><br><span class="line">print <span class="string">'|'</span>+x.<span class="function"><span class="title">strip</span><span class="params">(<span class="string">'xy'</span>)</span></span>+<span class="string">'|'</span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> hejyx  </span>|</span><br></pre></td></tr></table></figure>
-<h1 id="练习">练习</h1><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">'      xyxyxyyyy Garrick xxxxxxxx    '</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'name is:'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'|'</span>+name+<span class="string">'|'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Remove space:'</span></span><br><span class="line">name1 = name.<span class="keyword">strip</span>()</span><br><span class="line"><span class="keyword">print</span> <span class="string">'|'</span>+name1+<span class="string">'|'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Remove x and y:'</span></span><br><span class="line">name1 = name1.<span class="keyword">strip</span>(<span class="string">'xy'</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">'|'</span>+name1+<span class="string">'|'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">''</span>.center(<span class="number">20</span>,<span class="string">'='</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">'Remove space and x,y at the same time:'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'|'</span>+name.<span class="keyword">strip</span>(<span class="string">' xy'</span>)+<span class="string">'|'</span></span><br></pre></td></tr></table></figure>
-<p>输出结果:</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name is:</span><br><span class="line">|      xyxyxyyyy Garrick xxxxxxxx    |</span><br><span class="line">Remove space:</span><br><span class="line">|xyxyxyyyy Garrick xxxxxxxx|</span><br><span class="line">Remove x and y:</span><br><span class="line"><span class="header">| Garrick |</span><br><span class="line">====================</span></span><br><span class="line">Remove space and x,y at the same time:</span><br><span class="line">|Garrick|</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/16/Python Cookbook 1.4/">
-                字符串对齐 - Python Cookbook 1.4
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-16
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/16/Python Cookbook 1.4/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/16/Python Cookbook 1.4/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><h1 id="例子">例子</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print <span class="string">'|'</span>, <span class="string">'hej'</span>.<span class="function"><span class="title">ljust</span><span class="params">(<span class="number">20</span>)</span></span>, <span class="string">'|'</span>, <span class="string">'hej'</span>.<span class="function"><span class="title">rjust</span><span class="params">(<span class="number">20</span>)</span></span>, <span class="string">'|'</span>, <span class="string">'hej'</span>.<span class="function"><span class="title">center</span><span class="params">(<span class="number">20</span>)</span></span>, <span class="string">'|'</span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> hej                  </span>|<span class="string">                  hej </span>|<span class="string">         hej          </span>|</span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>这三种方法还可以接收第二个参数，制定一个填充字符：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print <span class="string">'hej'</span>.<span class="function"><span class="title">center</span><span class="params">(<span class="number">20</span>, <span class="string">'+'</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="comment">hej</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span></span><br></pre></td></tr></table></figure>
-<h1 id="练习">练习</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print <span class="string">''</span>.<span class="function"><span class="title">center</span><span class="params">(<span class="number">20</span>,<span class="string">'-'</span>)</span></span></span><br><span class="line">nums = [<span class="function"><span class="title">str</span><span class="params">(n)</span></span>.<span class="function"><span class="title">rjust</span><span class="params">(<span class="number">4</span>)</span></span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">4</span>)</span></span>]</span><br><span class="line">print <span class="string">'|'</span>+<span class="string">'|'</span>.<span class="function"><span class="title">join</span><span class="params">(nums)</span></span></span><br><span class="line">print <span class="string">''</span>.<span class="function"><span class="title">center</span><span class="params">(<span class="number">20</span>,<span class="string">'-'</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">--------------------</span><br><span class="line">|   0|   1|   2|   3</span><br><span class="line">--------------------</span></span><br></pre></td></tr></table></figure>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/15/Python Cookbook 1.3/">
-                测试一个对象是否是类字符串 - Python Cookbook 1.3
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-15
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/15/Python Cookbook 1.3/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/15/Python Cookbook 1.3/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>有时候需要测试一个对象或者函数方法的参数是否为字符串，利用内建的isinstance和basestring可以简单快速的检查某个对象是否是字符串或者Unicode对象。方法如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isAString</span><span class="params">(anobj)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> isinstance(anobj, basestring)</span><br></pre></td></tr></table></figure>
-<p>basestring是str和unicode类型的共同基类，若想保证这个测试方法按照预期工作，任何类字符串的用户自定义类都应该从基类basestring派生。</p>
-<p>但是对于不是从basestring派生的类字符串对象，该方法完全无能为力。如Python标准库中的UserString，就是一个非basestring派生的类字符串对象。对于这种类型，可以直接检查这个对象的行为是否真的像字符串一样，比如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isStringLike</span><span class="params">(anobj)</span>:</span></span><br><span class="line">	<span class="keyword">try</span>: anobj + <span class="string">''</span></span><br><span class="line">	<span class="keyword">except</span>: <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">	<span class="keyword">else</span>: <span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
-<p>这个方法比isAString函数慢而且复杂的多，但是的确适用于UserString以及其他的类字符串的类型，也适用于str和unicode。</p>
-<p>Python种常用的检查方法是所谓的鸭子判断法：如果它走路像鸭子，叫声也像鸭子，那么对于我们的应用而言他就是一个鸭子。IsStringLike只不过检查了叫声部分，那其实还不够。如果需要检查anobj对象的更多的类字符串特性，可以改造try子句，让它检查更多细节，比如：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">try: anobj.<span class="function"><span class="title">lower</span><span class="params">()</span></span> + anobj + <span class="string">''</span></span><br></pre></td></tr></table></figure>
-<p>这样的话，isStringLike函数的测试通常就满足需要了。</p>
-<h1 id="知识点">知识点</h1><p>进行类型验证（或者任何验证任务）的最具Python特色的方法是根据自己的预期去执行任务，在此过程种检测并处理由于不匹配产生的所有错误和异常。这是一个著名的处理方式，叫做“获得事后的原谅总是比事先得到许可要容易得多(It’s easier to ask forgiveness than permission)”，或简称EAFP。try/except是保证EAFP处理风格的关键工具。另一个与之相关的是LBYL(Look Before You Leap)，他们之间的异同可以参考<a href="http://oranlooney.com/lbyl-vs-eafp/" target="_blank" rel="external">LBYL vs. EAFP</a>。</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/14/Python Cookbook 1.2/">
-                字符和字符值之间的转换 - Python Cookbook 1.2
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-14
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/14/Python Cookbook 1.2/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/14/Python Cookbook 1.2/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="本节内容">本节内容</h2><p>Python的内建函数可以实现字符和相应ASCII码的转换。</p>
-<p>ord用来将字符转成ASCII码</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print <span class="function"><span class="title">ord</span><span class="params">(<span class="string">'a'</span>)</span></span></span><br><span class="line"><span class="number">97</span></span><br></pre></td></tr></table></figure>
-<p>chr用来将ASCII码转成字符</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print <span class="function"><span class="title">chr</span><span class="params">(<span class="number">97</span>)</span></span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-<h2 id="例子">例子</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="keyword">map</span>(<span class="keyword">ord</span>, <span class="string">"ciao"</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">''</span>.<span class="keyword">join</span>(<span class="keyword">map</span>(<span class="keyword">chr</span>, range(<span class="number">97</span>,<span class="number">100</span>)))</span><br></pre></td></tr></table></figure>
-<p>输出结果:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">99</span>, <span class="number">105</span>, <span class="number">97</span>, <span class="number">111</span>]</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
-<h2 id="知识点">知识点</h2><ol>
-<li>用chr可以将一个ASCII码转化成字符</li>
-<li>用ord可以获得一个字符的ASCII码</li>
-</ol>
-<h2 id="练习">练习</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chars = [<span class="function"><span class="title">chr</span><span class="params">(x)</span></span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">97</span>,<span class="number">100</span>)</span></span>]</span><br><span class="line">print chars</span><br><span class="line">print <span class="string">"==============="</span></span><br><span class="line"><span class="keyword">for</span> ch <span class="keyword">in</span> chars:</span><br><span class="line">    print <span class="function"><span class="title">ord</span><span class="params">(ch)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line">===============</span><br><span class="line"><span class="number">97</span></span><br><span class="line"><span class="number">98</span></span><br><span class="line"><span class="number">99</span></span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-  </div>
-
-  
-  <div class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">&raquo;</a>
-  </div>
-
-
-        </div>
-
-        
-      </div>
-
-
-      
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      <div class="site-overview">
-        <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui" />
-          <p class="site-author-name">Garrick Gui</p>
-        </div>
-        <p class="site-description motion-element"></p>
-        <div class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">32</span>
-              <span class="site-state-item-name">文章</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">5</span>
-              <span class="site-state-item-name">分類</span>
-              
-          </div>
-
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">18</span>
-              <span class="site-state-item-name">標籤</span>
-              </a>
-          </div>
-
-        </div>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-        
-      </div>
-
-      
-
-    </div>
-  </div>
-
-
-    </div>
-
-    <div id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">
-  
-  &copy; &nbsp; 
-  2016
-  <span class="with-love">
-    <i class="icon-heart"></i>
-  </span>
-  <span class="author">Garrick Gui</span>
-</div>
-
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
-</div>
-
-<div class="theme-info">
-  主題 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-
-
-      </div>
-    </div>
-
-    <div class="back-to-top"></div>
-  </div>
-
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
-
-
-
-  <script type="text/javascript" src="/js/search-toggle.js"></script>
-
-  
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-    });
-  </script>
-
-  
-
-  
-  
-  
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'guibin1989';
-      var disqus_identifier = 'page/3/index.html';
-      var disqus_title = '';
-      var disqus_url = '';
-
-      function run_disqus_script(disqus_script){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-      
-    </script>
-  
-
-
-
-
-  
-  
-
-</body>
-</html>
+  </body>
+ </html>
