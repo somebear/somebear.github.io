@@ -176,6 +176,93 @@
           
           
             
+              <a class="post-title-link" href="/2013/06/04/Python Cookbook 1.12/">
+                控制大小写 - Python Cookbook 1.12
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2013-06-04
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/Python/">Python</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2013/06/04/Python Cookbook 1.12/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/06/04/Python Cookbook 1.12/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h1 id="本节内容">本节内容</h1><p>将一个字符串由大写转成小写，或者倒过来。string提供的upper和lower方法就是用来做这个的，而且不需要参数，他们会返回来一个字符串的拷贝，每个字母都被改变成大写或者小写,非字母的会按照原样被复制。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#coding=utf-<span class="number">8</span></span><br><span class="line">name = <span class="string">"Garrick Gui - 桂斌"</span></span><br><span class="line">print <span class="string">"Upper: "</span> + name.<span class="function"><span class="title">upper</span><span class="params">()</span></span></span><br><span class="line">print <span class="string">"Lower: "</span> + name.<span class="function"><span class="title">lower</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Upper</span>: <span class="string">GARRICK GUI - 桂斌</span></span><br><span class="line"><span class="attribute">Lower</span>: <span class="string">garrick gui - 桂斌</span></span><br></pre></td></tr></table></figure>
+<p>capitalize可以将第一个字符改成大写，其他字符转成小写。title是将每个单词的第一个字符大写，其余部分转成小写：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">"gaRRiCK gUi"</span></span><br><span class="line">print <span class="string">"Cap: "</span> + name.<span class="function"><span class="title">capitalize</span><span class="params">()</span></span></span><br><span class="line">print <span class="string">"Title: "</span> + name.<span class="function"><span class="title">title</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Cap</span>: <span class="string">Garrick gui</span></span><br><span class="line"><span class="attribute">Title</span>: <span class="string">Garrick Gui</span></span><br></pre></td></tr></table></figure>
+<h1 id="知识点">知识点</h1><p>如果是用来检查一个字符串是否是满足需求的格式，可以用isupper, islower和istitle方法来检查。如果给定的字符串不为空，至少含有一个字母，而且分别满足全部大写、全部小写、每个单词的开头大写的条件，这三种方法都会返回True，如果给定的字符串是空的，都会返回False。如果给定的字符串非空，但是却不包含任何字母字符，也将返回False。但是没有相应的iscapitalized，我们可以自己编写代码来检查：<br>最简单的iscapitalized:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">iscapitalized</span><span class="params">(s)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> s == s.capitalize()</span><br></pre></td></tr></table></figure>
+<p>不过这偏离了“is…”方法们的行为模式，对于空字符串和不含字母的字符串，它也会返回True。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br><span class="line">notrans = string.maketrans(<span class="string">''</span>,<span class="string">''</span>)	<span class="comment">#identity''translation''</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">containsAny</span><span class="params">(str, strset)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> len(strset) != len(strset.translate(notrans, str))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">iscapitalized</span><span class="params">(s)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> s == s.capitalize() <span class="keyword">and</span> containsAny(s, string.letters)</span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/06/03/Python Cookbook 1.11/">
                 检查一个字符串是文本还是二进制 - Python Cookbook 1.11
               </a>
@@ -968,96 +1055,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/14/Python Cookbook 1.2/">
-                字符和字符值之间的转换 - Python Cookbook 1.2
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-14
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/14/Python Cookbook 1.2/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/14/Python Cookbook 1.2/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="本节内容">本节内容</h2><p>Python的内建函数可以实现字符和相应ASCII码的转换。</p>
-<p>ord用来将字符转成ASCII码</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print <span class="function"><span class="title">ord</span><span class="params">(<span class="string">'a'</span>)</span></span></span><br><span class="line"><span class="number">97</span></span><br></pre></td></tr></table></figure>
-<p>chr用来将ASCII码转成字符</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print <span class="function"><span class="title">chr</span><span class="params">(<span class="number">97</span>)</span></span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-<h2 id="例子">例子</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="keyword">map</span>(<span class="keyword">ord</span>, <span class="string">"ciao"</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">''</span>.<span class="keyword">join</span>(<span class="keyword">map</span>(<span class="keyword">chr</span>, range(<span class="number">97</span>,<span class="number">100</span>)))</span><br></pre></td></tr></table></figure>
-<p>输出结果:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">99</span>, <span class="number">105</span>, <span class="number">97</span>, <span class="number">111</span>]</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
-<h2 id="知识点">知识点</h2><ol>
-<li>用chr可以将一个ASCII码转化成字符</li>
-<li>用ord可以获得一个字符的ASCII码</li>
-</ol>
-<h2 id="练习">练习</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chars = [<span class="function"><span class="title">chr</span><span class="params">(x)</span></span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">97</span>,<span class="number">100</span>)</span></span>]</span><br><span class="line">print chars</span><br><span class="line">print <span class="string">"==============="</span></span><br><span class="line"><span class="keyword">for</span> ch <span class="keyword">in</span> chars:</span><br><span class="line">    print <span class="function"><span class="title">ord</span><span class="params">(ch)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line">===============</span><br><span class="line"><span class="number">97</span></span><br><span class="line"><span class="number">98</span></span><br><span class="line"><span class="number">99</span></span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -1096,7 +1093,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>

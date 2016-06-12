@@ -176,6 +176,96 @@
           
           
             
+              <a class="post-title-link" href="/2013/05/14/Python Cookbook 1.2/">
+                字符和字符值之间的转换 - Python Cookbook 1.2
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2013-05-14
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/Python/">Python</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2013/05/14/Python Cookbook 1.2/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/14/Python Cookbook 1.2/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="本节内容">本节内容</h2><p>Python的内建函数可以实现字符和相应ASCII码的转换。</p>
+<p>ord用来将字符转成ASCII码</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print <span class="function"><span class="title">ord</span><span class="params">(<span class="string">'a'</span>)</span></span></span><br><span class="line"><span class="number">97</span></span><br></pre></td></tr></table></figure>
+<p>chr用来将ASCII码转成字符</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print <span class="function"><span class="title">chr</span><span class="params">(<span class="number">97</span>)</span></span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<h2 id="例子">例子</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="keyword">map</span>(<span class="keyword">ord</span>, <span class="string">"ciao"</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">''</span>.<span class="keyword">join</span>(<span class="keyword">map</span>(<span class="keyword">chr</span>, range(<span class="number">97</span>,<span class="number">100</span>)))</span><br></pre></td></tr></table></figure>
+<p>输出结果:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">99</span>, <span class="number">105</span>, <span class="number">97</span>, <span class="number">111</span>]</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+<h2 id="知识点">知识点</h2><ol>
+<li>用chr可以将一个ASCII码转化成字符</li>
+<li>用ord可以获得一个字符的ASCII码</li>
+</ol>
+<h2 id="练习">练习</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chars = [<span class="function"><span class="title">chr</span><span class="params">(x)</span></span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">97</span>,<span class="number">100</span>)</span></span>]</span><br><span class="line">print chars</span><br><span class="line">print <span class="string">"==============="</span></span><br><span class="line"><span class="keyword">for</span> ch <span class="keyword">in</span> chars:</span><br><span class="line">    print <span class="function"><span class="title">ord</span><span class="params">(ch)</span></span></span><br></pre></td></tr></table></figure>
+<p>输出结果:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line">===============</span><br><span class="line"><span class="number">97</span></span><br><span class="line"><span class="number">98</span></span><br><span class="line"><span class="number">99</span></span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/05/13/Python Cookbook 1.1/">
                 每次处理一个字符 - Python Cookbook 1.1
               </a>
@@ -371,7 +461,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
