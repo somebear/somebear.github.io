@@ -176,6 +176,295 @@
           
           
             
+              <a class="post-title-link" href="/2017/01/02/2017/">
+                2017
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2017-01-02
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/life/">life</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2017/01/02/2017/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/02/2017/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p><img src="http://gandl.qiniucdn.com/S2e15_finn_excited.png" alt="S2e15_finn_excited"></p>
+<p>2017年已经悄悄到来，这个博客渐渐的也变成了年更的节奏。因为平时有记日记的习惯，一些想法和吐槽也就自然纳入了Day One里。博客一来不好打理，二来看的人也不多，也就渐渐的落灰了。</p>
+<p>今年打算多多向外输出一些信息，如果没意外的话应该也会经常更新这里啦~<br>2017请多指教。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2016/09/17/如何导出设备UDID/">
+                未命名
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2016-09-17
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2016/09/17/如何导出设备UDID/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/17/如何导出设备UDID/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h1 id="如何导出设备UDID">如何导出设备UDID</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ids = [<span class="string">"Device ID"</span>];</span><br><span class="line"><span class="keyword">var</span> names = [<span class="string">"Device Name"</span>];</span><br><span class="line">$(<span class="string">"td[aria-describedby=grid-table_name]"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    names.push($(<span class="keyword">this</span>).html());</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"td[aria-describedby=grid-table_deviceNumber]"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ids.push($(<span class="keyword">this</span>).html());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> output = <span class="string">""</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>; index &lt; ids.length; index++) &#123;</span><br><span class="line">    output += ids[index] + <span class="string">"\t"</span> + names[index] + <span class="string">"\n"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(output);</span><br></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2016/08/05/制作CocoaPods镜像/">
+                未命名
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2016-08-05
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2016/08/05/制作CocoaPods镜像/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/05/制作CocoaPods镜像/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h1 id="如何制作CocoaPods的工爸本地镜像">如何制作CocoaPods的工爸本地镜像</h1><h2 id="初始化">初始化</h2><p><code>git clone --mirror https://github.com/CocoaPods/Specs.git</code></p>
+<p>首先先制作一个CocoaPods的本地镜像。大小大概有将近900M，80000多个文件，等待时间略长。</p>
+<h2 id="编辑config文件">编辑config文件</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[core]</span><br><span class="line">        repositoryformatversion = <span class="number">0</span></span><br><span class="line">        filemode = <span class="keyword">true</span></span><br><span class="line">        bare = <span class="keyword">true</span></span><br><span class="line">[remote <span class="string">"origin"</span>]</span><br><span class="line">        fetch = +refs/heads/*<span class="symbol">:refs/heads/*</span></span><br><span class="line">        fetch = +refs/tags/*<span class="symbol">:refs/tags/*</span></span><br><span class="line">        mirror = <span class="keyword">true</span></span><br><span class="line">        url = <span class="symbol">https:</span>/<span class="regexp">/github.com/</span><span class="constant">CocoaPods/Specs.</span>git</span><br><span class="line">[remote <span class="string">"mirrors"</span>]</span><br><span class="line">        url = <span class="symbol">ssh:</span>/<span class="regexp">/git@git.idaddy.cn:1022/</span><span class="constant">DaddyPods/CocoaPods-Mirror.</span>git</span><br><span class="line">        mirror = <span class="keyword">true</span></span><br><span class="line">        skipDefaultUpdate = <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+<p>之后在config文件里面配置一下我们本地镜像项目的URL。我事先在gitlab上建了一个CocoaPods-Mirror项目，将对应的地址复制过来即可。注意这里我用的是ssh地址，因为我创建的是internal的项目，访问时是需要验证的。使用ssh地址，只要将ssh key配置好，之后自动同步脚本就不用输用户名和密码了。</p>
+<h2 id="定期同步">定期同步</h2><p>编辑同步脚本specssync.sh，添加：</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">git</span> fetch origin</span><br><span class="line"><span class="label">git</span> <span class="keyword">push </span>mirrors</span><br></pre></td></tr></table></figure>
+<p>设置cronjob每小时同步一次</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> * * * * /home/git/specssync.sh  &gt; /var/<span class="built_in">log</span>/specssync.<span class="built_in">log</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>因为文件过多，第一次push需要很长时间。</p>
+<h2 id="切换到工爸CocoaPods镜像源">切换到工爸CocoaPods镜像源</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pod repo remove <span class="keyword">master</span></span><br><span class="line"><span class="title">pod</span> repo add <span class="keyword">master</span> <span class="title">ssh</span>://git@git.idaddy.cn:<span class="number">1022</span>/DaddyPods/CocoaPods-Mirror.git</span><br><span class="line">pod repo update</span><br></pre></td></tr></table></figure>
+<p>执行最后一条命令的时候，Cocoapods会默认从github上拷贝一份repo 名为master-1的备份，等待个半小时之后就结束啦。之后pod update就不需要那么长时间啦。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2016/08/03/将repo push到另一个远程repo/">
+                未命名
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2016-08-03
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2016/08/03/将repo push到另一个远程repo/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/03/将repo push到另一个远程repo/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h1 id="如何将一个repo_push到另一个远程repo">如何将一个repo push到另一个远程repo</h1><blockquote>
+<p>Create a new repo at github.<br>Clone the repo from fedorahosted to your local machine.<br>git remote rename origin upstream<br>git remote add origin URL_TO_GITHUB_REPO<br>git push origin master<br>Now you can work with it just like any other github repo. To pull in patches from upstream, simply run git pull upstream master &amp;&amp; git push origin master.</p>
+</blockquote>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2016/06/10/公羊/">
                 公羊
               </a>
@@ -645,348 +934,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2014/04/09/Untrasted/">
-                Untrasted
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2014-04-09
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/好玩的/">好玩的</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2014/04/09/Untrasted/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/04/09/Untrasted/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p><a href="http://alexnisnevich.github.io/untrusted/" target="_blank" rel="external">Untrasted</a>是一个在线的js过关小游戏，昨天玩了几关还挺有意思的。<br>游戏界面虽然简单，但是做的很精致，每一关都有不同的BGM。<br>你要做的事情是在允许的地方添加或修改生成关卡的源码然后过关。没有所谓的正确答案，只要能过关就可以。</p>
-<p>PS: 在卡关的时候可以点右下角的API或者按Control+1看一看API说明。</p>
-<p>这个游戏是一场黑客松的冠军作品，源码都开源在<a href="https://github.com/AlexNisnevich/untrusted" target="_blank" rel="external">github</a>上。</p>
-<p>下面是我过关的方法，:)</p>
-<p>第一关 <a href="https://gist.github.com/anonymous/4581f32eae741f7b867c" target="_blank" rel="external">https://gist.github.com/anonymous/4581f32eae741f7b867c</a></p>
-<p>第二关 <a href="https://gist.github.com/anonymous/60aab1c07a6fa7c860ef" target="_blank" rel="external">https://gist.github.com/anonymous/60aab1c07a6fa7c860ef</a></p>
-<p>第三关 <a href="https://gist.github.com/anonymous/de9997f5dfdf364fb9ab" target="_blank" rel="external">https://gist.github.com/anonymous/de9997f5dfdf364fb9ab</a></p>
-<p>To Be Continued…</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2014/03/10/OS X 连不上wifi/">
-                OS X连不上wifi
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2014-03-10
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2014/03/10/OS X 连不上wifi/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/03/10/OS X 连不上wifi/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>今天Macbook连不上wifi了，一开始是看不到自己的路由器只能看到其他的人网络，后来能看到了但是连不上去。</p>
-<p>google了一下找到的解决方案：</p>
-<p>重启并在启动时同时按下 command + option + p + r ，启动音响(”dang~”)三次之后即可。</p>
-<p>这个组合键的作用是用来重置NVRAM和PRAM的。</p>
-<p>关于NVRAM和PRAM的内容摘自Apple Support:</p>
-<blockquote>
-<p>NVRAM/PRAM: Mac 会将某些设置存储在特定的存储区中，即使关机这些设置也不会丢失。在基于 Intel 的 Mac 上，存储位置是称为 NVRAM 的内存；而在基于 PowerPC 的 Mac 上，存储位置则是称为 PRAM 的内存。<br>存储在 NVRAM/PRAM 中的信息包括：</p>
-<ul>
-<li><p>扬声器音量</p>
-</li>
-<li><p>屏幕分辨率</p>
-</li>
-<li><p>启动磁盘选择</p>
-</li>
-<li><p>最近的内核崩溃信息（如果有的话）</p>
-</li>
-</ul>
-<p>如果遇到的问题与上述功能相关，您可能需要重置 NVRAM 或 PRAM。例如，如果 Mac 并非从“启动磁盘”偏好设置中指定的启动磁盘启动，或者启动 Mac 时暂时出现了“问号”图标，重置 NVRAM 或 PRAM 可能会有帮助。</p>
-<p>注：OS X 不会将网络设置存储在 NVRAM/PRAM 中。如果您正在故障诊断网络问题，重置不会有任何帮助。</p>
-</blockquote>
-<p>虽然官方文档说对网络故障没有任何帮助，但是却确实解决了我的问题。。。</p>
-<h3 id="相关链接">相关链接</h3><p><a href="http://support.apple.com/kb/HT1379?viewlocale=zh_CN&amp;locale=zh_CN" target="_blank" rel="external">关于 NVRAM 和 PRAM</a></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2014/02/20/unwind/">
-                unwind
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2014-02-20
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/iOS/">iOS</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2014/02/20/unwind/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/02/20/unwind/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在iOS中可以利用Segue来完成从A视图到B视图的切换，而若想从B视图返回A视图就可以用Unwind了。</p>
-<p>实现unwind非常简单：</p>
-<p>1 在你要unwind回去的view controller里实现一个以UIStoryboardSegue为参数的action method。（如果想从B视图unwind回A视图，就在A视图中加）</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@implementation</span> AViewController</span><br><span class="line"></span><br><span class="line">- (IBAction)<span class="attribute">unwindToRed</span>:(UIStoryboardSegue *)unwindSegue</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">@end</span></span><br></pre></td></tr></table></figure>
-<p>2 在要执行unwind的组件上ctrl拖拽到自己view controller的Exit按钮上，在弹出框上选择要绑定的方法。</p>
-<p>PS: 如果有多个unwind到同一个view controller的话可以利用传入UIStoryboardSegue的sourceViewController来判断是由哪个view controller返回的。</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2014/02/17/G&L Money - 项目启动/">
-                G&L Money - 项目启动
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2014-02-17
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/iOS/">iOS</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2014/02/17/G&L Money - 项目启动/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/02/17/G&L Money - 项目启动/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>斯坦福的iOS开发公开课看完了的说，可是看完归看完不自己动手做点什么的话就什么都学不会吧。然后就想起Lynn以前说过现在用的记账软件有很多功能都要付费十分不爽，那就来做一个记账软件吧，名字就叫G&amp;L Money好了~</p>
-<h3 id="项目需求">项目需求</h3><p>Lynn开动那发育不完全的大脑的一番一番又一番的思考了一夜之后，提供了以下的需求文(图)档(片)：</p>
-<p>{<1>}<img src="http://gandl.qiniudn.com/blog/GL%20Money%20requirement.jpg" alt="G&amp;L Money requirement"></1></p>
-<h3 id="UI_Design">UI Design</h3><p>{<2>}<img src="http://gandl.qiniudn.com/blog/G&amp;L%20UI%20design.jpg" alt="G&amp;L UI design"></2></p>
-<p>不用说我也知道挺难看的。。咱们先完成功能嘛，UI以及细节在迭代的时候再优化。。。</p>
-<h3 id="Data_Model">Data Model</h3><p>{<3>}<img src="http://gandl.qiniudn.com/blog/G&amp;L%20Data%20Model.jpg" alt="G&amp;L Data Model"></3></p>
-<p>一共三个实体，分别是：</p>
-<ul>
-<li>Record：每天的记录，保存每天的消费总数。</li>
-<li>Item：消费或收入条目，记录与条目的关系为1:N。</li>
-<li>Category：消费的类型，类型和条目的关系也是1:N。</li>
-</ul>
-<h3 id="Github地址">Github地址</h3><p>这个项目会慢慢的做的，版本控制用的Xcode带的git，项目存放在<a href="https://github.com/guibin1989/GLMoney" target="_blank" rel="external">这里</a>。</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -1025,7 +972,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1074,7 +1021,7 @@
         <div class="copyright">
   
   &copy; &nbsp; 
-  2016
+  2017
   <span class="with-love">
     <i class="icon-heart"></i>
   </span>

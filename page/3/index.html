@@ -176,6 +176,366 @@
           
           
             
+              <a class="post-title-link" href="/2013/07/15/Algorithms - Karatsuba Mutiplication/">
+                Algorithms - Karatsuba Mutiplication
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2013-07-15
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2013/07/15/Algorithms - Karatsuba Mutiplication/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/07/15/Algorithms - Karatsuba Mutiplication/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h1 id="算法简介">算法简介</h1><p><a href="http://en.wikipedia.org/wiki/Karatsuba_algorithm" target="_blank" rel="external">Karatsuba Mutiplication</a>算法可以快速的将两个n位的整数的乘积算出。对于大整数来说计算速度优于学校教授的传统计算方法。</p>
+<h1 id="算法步骤">算法步骤</h1><h2 id="预备">预备</h2><p>将n位的整数平均分为前后两个部分，假设第一个整数前半部分为a，后半部分为b，第二个整数分为c和d。</p>
+<h2 id="步骤">步骤</h2><ol>
+<li>计算a*c = r1</li>
+<li>计算b*d = r2</li>
+<li>计算(a+b) * (c+d) = r3</li>
+<li>计算r3 - r2 - r1 = r4</li>
+<li>计算r1*10^n + r2 + r4*10^(n/2)，即得出结果。</li>
+</ol>
+<h2 id="例子">例子</h2><p>x = 5678<br>y = 1234<br>计算x*y (结果:7006652)</p>
+<p>将x均分成a和b: a= 56, b= 78<br>将y均分成c和d: c= 12, d= 34</p>
+<p>r1 = a*c = 56*12 = 672<br>r2 = b*d = 78*34 = 2652<br>r3 = (a+b)*(c+d) = (56+78)*(12+34) = 134*46 = 6164<br>r4 = r3 - r2 - r1 = 6164 - 2652 - 672 = 2840<br>计算结果为 672*10^4 + 2652 + 2840*10^2 = 6720000 + 2652 + 284000 = 7006652</p>
+<h1 id="原理和证明">原理和证明</h1><p>对于n位的整数x和y，我们可以将其看成是:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = a\*<span class="number">10</span>^(n/<span class="number">2</span>) + b 	<span class="preprocessor">#如：<span class="number">5678</span> = <span class="number">5600</span> + <span class="number">78</span> = <span class="number">56</span>*<span class="number">10</span>^<span class="number">2</span> + <span class="number">78</span></span></span><br><span class="line">y = c\*<span class="number">10</span>^(n/<span class="number">2</span>) + d</span><br></pre></td></tr></table></figure>
+<p>我们要计算x*y，即:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x * y</span><br><span class="line">=(a*<span class="number">10</span>^(n/<span class="number">2</span>)+b) * (c*<span class="number">10</span>^(n/<span class="number">2</span>)+d)</span><br><span class="line">=<span class="number">10</span>^n*ac + <span class="number">10</span>^(n/<span class="number">2</span>)*(ad+bc) + bd</span><br></pre></td></tr></table></figure>
+<p>到此我们需要计算4个乘法即ac, ad, bc, bd。这时如果发现a*c仍然是大整数相乘，还可以将a*c用Karatsuba算法计算，同理如果a*c的乘法子项依然过大我们还可以继续使用该算法计算，因此在程序实现阶段我们是用的是递归。由于递归的函数的主体是乘法部分所以我们应该尽量减少乘法的次数。于是有了优化的版本，因为我们已经有了ac和bd的值，ad+bc就可以用(a+b)*(c+d)-ac-bd来算出，即步骤3和步骤4做的事情:</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(a+<span class="keyword">b)*(c+d) </span>- ac - <span class="keyword">bd</span><br><span class="line"></span><span class="label">=ac</span> + ad + <span class="keyword">bc </span>+ <span class="keyword">bd </span>- ac - <span class="keyword">bd</span><br><span class="line"></span><span class="label">=ad</span> + <span class="keyword">bc</span></span><br></pre></td></tr></table></figure>
+<p>这样我们就只用计算3次乘法了。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/07/04/天使/">
+                天使
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2013-07-04
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/life/">life</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2013/07/04/天使/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/07/04/天使/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>梅子：我要是男的就好了</p>
+<p>纸灰机：why</p>
+<p>梅子：那我就追你和你搅基啊</p>
+<p>梅子：哈哈哈开玩笑 我要是男生我就找一个我这样的女生……如果找不到 再和你搅基好了</p>
+<p>纸灰机：找不到才找我，我咋还成备胎了呢，说好的做彼此的天使呢？</p>
+<p>梅子：然后就可以互相烤翅膀吃</p>
+<p>纸灰机：那就是做彼此的奥尔良了</p>
+</blockquote>
+<pre><code>和梅子扯于微信
+</code></pre>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/07/04/情报科/">
+                情报科
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2013-07-04
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/life/">life</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2013/07/04/情报科/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/07/04/情报科/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>Smilence*  11:15:29</p>
+<p>你好</p>
+<p>纸灰机  11:15:35</p>
+<p>你爷爷</p>
+<p>纸灰机  11:15:44</p>
+<p>开完会了？</p>
+<p>Smilence*  11:16:08</p>
+<p>电视电话会议 接设备 点名</p>
+<p>Smilence*  11:16:36</p>
+<p>贼有技术含量</p>
+<p>纸灰机  11:16:41</p>
+<p>会使么</p>
+<p>Smilence*  11:17:04</p>
+<p>会插插座就会使</p>
+<p>纸灰机  11:17:18</p>
+<p>你这部门还有Oops Call啊</p>
+<p>纸灰机  11:17:26</p>
+<p>不是情报部门么</p>
+<p>Smilence*  11:17:58</p>
+<p>情报和情报设备部门</p>
+<p>纸灰机  11:18:13</p>
+<p>传达室嘛？</p>
+<p>Smilence*  11:18:40</p>
+<p>我想不出什么来反驳你</p>
+<p>纸灰机  11:19:05</p>
+<p>王大爷</p>
+<p>Smilence*  11:28:47</p>
+<p>不能侮辱我的职业 我可是很认真的在养膘</p>
+</blockquote>
+<pre><code>和阿晖扯于QQ
+</code></pre>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2013/06/18/Python Tips/">
+                Python参考手册知识积累
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2013-06-18
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/Python/">Python</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2013/06/18/Python Tips/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/06/18/Python Tips/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>最近看Python Cookbook感觉进度有些慢，就打算开始看《Python参考手册》。由于Cookbook是一些经典的例子和代码就留着以后慢慢看啦。<br>下面是看参考手册时遇到的值得积累的知识点:</p>
+<h1 id="第一章">第一章</h1><ul>
+<li>用交互方式使用Python时，特殊变量_用于保存最后一次运算的结果。</li>
+<li>对于Python文件来说，解释器会不断运行直到到达输入文件的结尾。如果是以交互方式运行，有两种方法可以退出解释器，一种是输入EOF(End of File，文件结束)，另一种是用Python IDE的下拉菜单中选择exit。</li>
+<li>format()函数使用的格式说明符类似与传统字符串格式化运算符(%)使用的格式说明符，比如:<br>  print “{0:3d} {1:0.2f}”.format(year,principal)<br>其中，”0:3d”和”1:0.2f”中冒号前的数字代表传给format方法的相关参数，而冒号后面的部分则是格式说明符。</li>
+<li>print后面跟上’,’将忽略换行符。</li>
+</ul>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2013/06/04/Python Cookbook 1.12/">
                 控制大小写 - Python Cookbook 1.12
               </a>
@@ -701,360 +1061,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/18/Python Cookbook 1.6/">
-                合并字符串 - Python Cookbook 1.6
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-18
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/18/Python Cookbook 1.6/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/18/Python Cookbook 1.6/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>有时我们需要将一些小的字符串拼接成一个大的字符串。Python提供以下方法来实现这个功能：</p>
-<ul>
-<li>用+操作符或者+=拼接</li>
-</ul>
-<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="annotation">small</span><span class="number">1</span> + <span class="annotation">small</span><span class="number">2</span> + <span class="string">' something '</span> + smaill<span class="number">3</span> + <span class="string">' yet more'</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>用和+操作完全等同但却更加漂亮和紧凑的reduce</li>
-</ul>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">import</span> <span class="literal">operator</span></span><br><span class="line">largeString = reduce(<span class="literal">operator</span>.add, pieces, <span class="string">''</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>用字符串格式化操作符%</li>
-</ul>
-<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="string">'%s%s something %s yet more'</span> % (<span class="annotation">small</span><span class="number">1</span>, <span class="annotation">small</span><span class="number">2</span>, <span class="annotation">small</span><span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>用字符串操作符join</li>
-</ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="string">''</span>.<span class="function"><span class="title">join</span><span class="params">(pieces)</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>虽然这4种方法都可以实现字符串合并的目地，但是由于字符串对象是无法改变的。任何对字符串的操作，包括字符串拼接都会产生一个新的字符串对象，而不是修改原有的对象。因为拼接N个字符串将涉及创建并丢弃N-1个中间结果。</p>
-<p>如果有少量字符串（尤其是那些绑定到变量上的）需要拼接，甚至有时还需要添加一些额外的信息，此时最好使用字符串格式化操作符%。性能对这种操作完全不是一个问题。和使用多个+操作符相比，%具有更好地可读性也不必对非字符串调用str方法。另外还可以使用%s之外的其他格式制定符，这样可以实现更多的格式要求，比如浮点数转化为字符串的表示时，可以控制它的有效位数。</p>
-<p>如果有较多的字符串要拼接的话，性能就成了一个很现实的问题。此时应该使用join方法，join会把输入的字符串序列一口吞下，而无须产生子项之间的中间结果，还可以制定子项的连接字符。这是一种快速、整洁、优雅且兼具良好可读性的合并大字符串的方法。无论何时join都是最值得选择的方式。</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/17/Python Cookbook 1.5/">
-                去除字符串两端的空格 - Python Cookbook 1.5
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-17
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/17/Python Cookbook 1.5/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/17/Python Cookbook 1.5/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>字符串对象的lstrip, rstrip和strip可以用来去掉字符串的开头，末尾和两端的空格。这些方法都不需要参数，返回的是经过处理的原字符串的拷贝。</p>
-<h1 id="例子">例子</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">'    hej   '</span></span><br><span class="line">print <span class="string">'|'</span>, x.<span class="function"><span class="title">lstrip</span><span class="params">()</span></span>, <span class="string">'|'</span>, x.<span class="function"><span class="title">rstrip</span><span class="params">()</span></span>, <span class="string">'|'</span>, x.<span class="function"><span class="title">strip</span><span class="params">()</span></span>, <span class="string">'|'</span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> hej    </span>|<span class="string">     hej </span>|<span class="string"> hej </span>|</span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>也可以选择去掉其他字符，只需提供一个字符串作为这3种方法的参数即可：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">'xyxxyy hejyx  yyx'</span></span><br><span class="line">print <span class="string">'|'</span>+x.<span class="function"><span class="title">strip</span><span class="params">(<span class="string">'xy'</span>)</span></span>+<span class="string">'|'</span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> hejyx  </span>|</span><br></pre></td></tr></table></figure>
-<h1 id="练习">练习</h1><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">'      xyxyxyyyy Garrick xxxxxxxx    '</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'name is:'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'|'</span>+name+<span class="string">'|'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Remove space:'</span></span><br><span class="line">name1 = name.<span class="keyword">strip</span>()</span><br><span class="line"><span class="keyword">print</span> <span class="string">'|'</span>+name1+<span class="string">'|'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Remove x and y:'</span></span><br><span class="line">name1 = name1.<span class="keyword">strip</span>(<span class="string">'xy'</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">'|'</span>+name1+<span class="string">'|'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">''</span>.center(<span class="number">20</span>,<span class="string">'='</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">'Remove space and x,y at the same time:'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'|'</span>+name.<span class="keyword">strip</span>(<span class="string">' xy'</span>)+<span class="string">'|'</span></span><br></pre></td></tr></table></figure>
-<p>输出结果:</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name is:</span><br><span class="line">|      xyxyxyyyy Garrick xxxxxxxx    |</span><br><span class="line">Remove space:</span><br><span class="line">|xyxyxyyyy Garrick xxxxxxxx|</span><br><span class="line">Remove x and y:</span><br><span class="line"><span class="header">| Garrick |</span><br><span class="line">====================</span></span><br><span class="line">Remove space and x,y at the same time:</span><br><span class="line">|Garrick|</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/16/Python Cookbook 1.4/">
-                字符串对齐 - Python Cookbook 1.4
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-16
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/16/Python Cookbook 1.4/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/16/Python Cookbook 1.4/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><h1 id="例子">例子</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print <span class="string">'|'</span>, <span class="string">'hej'</span>.<span class="function"><span class="title">ljust</span><span class="params">(<span class="number">20</span>)</span></span>, <span class="string">'|'</span>, <span class="string">'hej'</span>.<span class="function"><span class="title">rjust</span><span class="params">(<span class="number">20</span>)</span></span>, <span class="string">'|'</span>, <span class="string">'hej'</span>.<span class="function"><span class="title">center</span><span class="params">(<span class="number">20</span>)</span></span>, <span class="string">'|'</span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> hej                  </span>|<span class="string">                  hej </span>|<span class="string">         hej          </span>|</span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>这三种方法还可以接收第二个参数，制定一个填充字符：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print <span class="string">'hej'</span>.<span class="function"><span class="title">center</span><span class="params">(<span class="number">20</span>, <span class="string">'+'</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="comment">hej</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span></span><br></pre></td></tr></table></figure>
-<h1 id="练习">练习</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print <span class="string">''</span>.<span class="function"><span class="title">center</span><span class="params">(<span class="number">20</span>,<span class="string">'-'</span>)</span></span></span><br><span class="line">nums = [<span class="function"><span class="title">str</span><span class="params">(n)</span></span>.<span class="function"><span class="title">rjust</span><span class="params">(<span class="number">4</span>)</span></span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">4</span>)</span></span>]</span><br><span class="line">print <span class="string">'|'</span>+<span class="string">'|'</span>.<span class="function"><span class="title">join</span><span class="params">(nums)</span></span></span><br><span class="line">print <span class="string">''</span>.<span class="function"><span class="title">center</span><span class="params">(<span class="number">20</span>,<span class="string">'-'</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">--------------------</span><br><span class="line">|   0|   1|   2|   3</span><br><span class="line">--------------------</span></span><br></pre></td></tr></table></figure>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2013/05/15/Python Cookbook 1.3/">
-                测试一个对象是否是类字符串 - Python Cookbook 1.3
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2013-05-15
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
-            
-              <a href="/categories/Python/">Python</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2013/05/15/Python Cookbook 1.3/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/15/Python Cookbook 1.3/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="本节内容">本节内容</h1><p>有时候需要测试一个对象或者函数方法的参数是否为字符串，利用内建的isinstance和basestring可以简单快速的检查某个对象是否是字符串或者Unicode对象。方法如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isAString</span><span class="params">(anobj)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> isinstance(anobj, basestring)</span><br></pre></td></tr></table></figure>
-<p>basestring是str和unicode类型的共同基类，若想保证这个测试方法按照预期工作，任何类字符串的用户自定义类都应该从基类basestring派生。</p>
-<p>但是对于不是从basestring派生的类字符串对象，该方法完全无能为力。如Python标准库中的UserString，就是一个非basestring派生的类字符串对象。对于这种类型，可以直接检查这个对象的行为是否真的像字符串一样，比如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isStringLike</span><span class="params">(anobj)</span>:</span></span><br><span class="line">	<span class="keyword">try</span>: anobj + <span class="string">''</span></span><br><span class="line">	<span class="keyword">except</span>: <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">	<span class="keyword">else</span>: <span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
-<p>这个方法比isAString函数慢而且复杂的多，但是的确适用于UserString以及其他的类字符串的类型，也适用于str和unicode。</p>
-<p>Python种常用的检查方法是所谓的鸭子判断法：如果它走路像鸭子，叫声也像鸭子，那么对于我们的应用而言他就是一个鸭子。IsStringLike只不过检查了叫声部分，那其实还不够。如果需要检查anobj对象的更多的类字符串特性，可以改造try子句，让它检查更多细节，比如：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">try: anobj.<span class="function"><span class="title">lower</span><span class="params">()</span></span> + anobj + <span class="string">''</span></span><br></pre></td></tr></table></figure>
-<p>这样的话，isStringLike函数的测试通常就满足需要了。</p>
-<h1 id="知识点">知识点</h1><p>进行类型验证（或者任何验证任务）的最具Python特色的方法是根据自己的预期去执行任务，在此过程种检测并处理由于不匹配产生的所有错误和异常。这是一个著名的处理方式，叫做“获得事后的原谅总是比事先得到许可要容易得多(It’s easier to ask forgiveness than permission)”，或简称EAFP。try/except是保证EAFP处理风格的关键工具。另一个与之相关的是LBYL(Look Before You Leap)，他们之间的异同可以参考<a href="http://oranlooney.com/lbyl-vs-eafp/" target="_blank" rel="external">LBYL vs. EAFP</a>。</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -1093,7 +1099,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1142,7 +1148,7 @@
         <div class="copyright">
   
   &copy; &nbsp; 
-  2016
+  2017
   <span class="with-love">
     <i class="icon-heart"></i>
   </span>
