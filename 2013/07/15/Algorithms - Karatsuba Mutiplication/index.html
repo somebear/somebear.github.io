@@ -1,36 +1,36 @@
 <!doctype html>
 <html class="theme-next use-motion theme-next-mist">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5">
 
 
 
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
-
-
-
-
-  <meta name="keywords" content="Algorithms," />
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3">
 
 
 
 
+  <meta name="keywords" content="Algorithms,">
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3">
 
 
 
@@ -94,31 +94,31 @@
         
         <li class="menu-item menu-item-home">
           <a href="/">
-            <i class="menu-item-icon icon-home"></i> <br />
-            首頁
+            <i class="menu-item-icon icon-home"></i> <br>
+            Home
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives">
-            <i class="menu-item-icon icon-archives"></i> <br />
-            歸檔
+            <i class="menu-item-icon icon-archives"></i> <br>
+            Archives
           </a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags">
-            <i class="menu-item-icon icon-tags"></i> <br />
-            標籤
+            <i class="menu-item-icon icon-tags"></i> <br>
+            Tags
           </a>
         </li>
       
         
         <li class="menu-item menu-item-projects">
           <a href="/projects">
-            <i class="menu-item-icon icon-projects"></i> <br />
+            <i class="menu-item-icon icon-projects"></i> <br>
             项目
           </a>
         </li>
@@ -126,7 +126,7 @@
         
         <li class="menu-item menu-item-movies">
           <a href="/imdb250">
-            <i class="menu-item-icon icon-movies"></i> <br />
+            <i class="menu-item-icon icon-movies"></i> <br>
             电影
           </a>
         </li>
@@ -134,7 +134,7 @@
         
         <li class="menu-item menu-item-books">
           <a href="/reading">
-            <i class="menu-item-icon icon-books"></i> <br />
+            <i class="menu-item-icon icon-books"></i> <br>
             图书
           </a>
         </li>
@@ -142,8 +142,8 @@
         
         <li class="menu-item menu-item-about">
           <a href="/about">
-            <i class="menu-item-icon icon-about"></i> <br />
-            關於
+            <i class="menu-item-icon icon-about"></i> <br>
+            About
           </a>
         </li>
       
@@ -182,7 +182,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於 2013-07-15
+          Posted on 2013-07-15
         </span>
 
         
@@ -191,7 +191,7 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2013/07/15/Algorithms - Karatsuba Mutiplication/#comments" >
+            <a href="/2013/07/15/Algorithms - Karatsuba Mutiplication/#comments">
               <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/07/15/Algorithms - Karatsuba Mutiplication/"></span>
             </a>
           </span>
@@ -206,24 +206,29 @@
       
 
       
-        <h1 id="算法简介">算法简介</h1><p><a href="http://en.wikipedia.org/wiki/Karatsuba_algorithm" target="_blank" rel="external">Karatsuba Mutiplication</a>算法可以快速的将两个n位的整数的乘积算出。对于大整数来说计算速度优于学校教授的传统计算方法。</p>
-<h1 id="算法步骤">算法步骤</h1><h2 id="预备">预备</h2><p>将n位的整数平均分为前后两个部分，假设第一个整数前半部分为a，后半部分为b，第二个整数分为c和d。</p>
-<h2 id="步骤">步骤</h2><ol>
+        <p>#算法简介<br><a href="http://en.wikipedia.org/wiki/Karatsuba_algorithm" target="_blank" rel="noopener">Karatsuba Mutiplication</a>算法可以快速的将两个n位的整数的乘积算出。对于大整数来说计算速度优于学校教授的传统计算方法。</p>
+<p>#算法步骤</p>
+<p>##预备</p>
+<p>将n位的整数平均分为前后两个部分，假设第一个整数前半部分为a，后半部分为b，第二个整数分为c和d。</p>
+<p>##步骤</p>
+<ol>
 <li>计算a*c = r1</li>
 <li>计算b*d = r2</li>
 <li>计算(a+b) * (c+d) = r3</li>
 <li>计算r3 - r2 - r1 = r4</li>
 <li>计算r1*10^n + r2 + r4*10^(n/2)，即得出结果。</li>
 </ol>
-<h2 id="例子">例子</h2><p>x = 5678<br>y = 1234<br>计算x*y (结果:7006652)</p>
+<p>##例子</p>
+<p>x = 5678<br>y = 1234<br>计算x*y (结果:7006652)</p>
 <p>将x均分成a和b: a= 56, b= 78<br>将y均分成c和d: c= 12, d= 34</p>
 <p>r1 = a*c = 56*12 = 672<br>r2 = b*d = 78*34 = 2652<br>r3 = (a+b)*(c+d) = (56+78)*(12+34) = 134*46 = 6164<br>r4 = r3 - r2 - r1 = 6164 - 2652 - 672 = 2840<br>计算结果为 672*10^4 + 2652 + 2840*10^2 = 6720000 + 2652 + 284000 = 7006652</p>
-<h1 id="原理和证明">原理和证明</h1><p>对于n位的整数x和y，我们可以将其看成是:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = a\*<span class="number">10</span>^(n/<span class="number">2</span>) + b 	<span class="preprocessor">#如：<span class="number">5678</span> = <span class="number">5600</span> + <span class="number">78</span> = <span class="number">56</span>*<span class="number">10</span>^<span class="number">2</span> + <span class="number">78</span></span></span><br><span class="line">y = c\*<span class="number">10</span>^(n/<span class="number">2</span>) + d</span><br></pre></td></tr></table></figure>
+<p>#原理和证明</p>
+<p>对于n位的整数x和y，我们可以将其看成是:</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = a\*<span class="number">10</span>^(n/<span class="number">2</span>) + b 	#如：<span class="number">5678</span> = <span class="number">5600</span> + <span class="number">78</span> = <span class="number">56</span>*<span class="number">10</span>^<span class="number">2</span> + <span class="number">78</span></span><br><span class="line">y = c\*<span class="number">10</span>^(n/<span class="number">2</span>) + d</span><br></pre></td></tr></table></figure>
 <p>我们要计算x*y，即:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x * y</span><br><span class="line">=(a*<span class="number">10</span>^(n/<span class="number">2</span>)+b) * (c*<span class="number">10</span>^(n/<span class="number">2</span>)+d)</span><br><span class="line">=<span class="number">10</span>^n*ac + <span class="number">10</span>^(n/<span class="number">2</span>)*(ad+bc) + bd</span><br></pre></td></tr></table></figure>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x * y</span><br><span class="line">=(a*<span class="number">10</span>^(<span class="built_in">n</span>/<span class="number">2</span>)+b) * (c*<span class="number">10</span>^(<span class="built_in">n</span>/<span class="number">2</span>)+d)</span><br><span class="line">=<span class="number">10</span>^<span class="built_in">n</span>*ac + <span class="number">10</span>^(<span class="built_in">n</span>/<span class="number">2</span>)*(ad+bc) + bd</span><br></pre></td></tr></table></figure>
 <p>到此我们需要计算4个乘法即ac, ad, bc, bd。这时如果发现a*c仍然是大整数相乘，还可以将a*c用Karatsuba算法计算，同理如果a*c的乘法子项依然过大我们还可以继续使用该算法计算，因此在程序实现阶段我们是用的是递归。由于递归的函数的主体是乘法部分所以我们应该尽量减少乘法的次数。于是有了优化的版本，因为我们已经有了ac和bd的值，ad+bc就可以用(a+b)*(c+d)-ac-bd来算出，即步骤3和步骤4做的事情:</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(a+<span class="keyword">b)*(c+d) </span>- ac - <span class="keyword">bd</span><br><span class="line"></span><span class="label">=ac</span> + ad + <span class="keyword">bc </span>+ <span class="keyword">bd </span>- ac - <span class="keyword">bd</span><br><span class="line"></span><span class="label">=ad</span> + <span class="keyword">bc</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(a+b)*(c+d) - ac - bd</span><br><span class="line">=ac + ad + bc + bd - ac - bd</span><br><span class="line">=ad + bc</span><br></pre></td></tr></table></figure>
 <p>这样我们就只用计算3次乘法了。</p>
 
       
@@ -248,7 +253,7 @@
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/07/04/情报科/">情报科</a>
+              <a href="/2013/07/04/天使/">天使</a>
             
           </div>
         </div>
@@ -299,17 +304,17 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
+            Table Of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            本站概覽
+            Overview
           </li>
         </ul>
       
 
       <div class="site-overview">
         <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui" />
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui">
           <p class="site-author-name">Garrick Gui</p>
         </div>
         <p class="site-description motion-element"></p>
@@ -317,21 +322,21 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">34</span>
-              <span class="site-state-item-name">文章</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
               <span class="site-state-item-count">5</span>
-              <span class="site-state-item-name">分類</span>
+              <span class="site-state-item-name">categories</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">18</span>
-              <span class="site-state-item-name">標籤</span>
+              <span class="site-state-item-name">tags</span>
               </a>
           </div>
 
@@ -358,7 +363,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法简介"><span class="nav-number">1.</span> <span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法步骤"><span class="nav-number">2.</span> <span class="nav-text">算法步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#预备"><span class="nav-number">2.1.</span> <span class="nav-text">预备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">2.2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子"><span class="nav-number">2.3.</span> <span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原理和证明"><span class="nav-number">3.</span> <span class="nav-text">原理和证明</span></a></li></ol></div>
+              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -384,11 +389,11 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主題 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>

@@ -1,36 +1,36 @@
 <!doctype html>
 <html class="theme-next use-motion theme-next-mist">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5">
 
 
 
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
-
-
-
-
-  <meta name="keywords" content="Python Cookbook," />
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3">
 
 
 
 
+  <meta name="keywords" content="Python Cookbook,">
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3">
 
 
 
@@ -94,31 +94,31 @@
         
         <li class="menu-item menu-item-home">
           <a href="/">
-            <i class="menu-item-icon icon-home"></i> <br />
-            首頁
+            <i class="menu-item-icon icon-home"></i> <br>
+            Home
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives">
-            <i class="menu-item-icon icon-archives"></i> <br />
-            歸檔
+            <i class="menu-item-icon icon-archives"></i> <br>
+            Archives
           </a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags">
-            <i class="menu-item-icon icon-tags"></i> <br />
-            標籤
+            <i class="menu-item-icon icon-tags"></i> <br>
+            Tags
           </a>
         </li>
       
         
         <li class="menu-item menu-item-projects">
           <a href="/projects">
-            <i class="menu-item-icon icon-projects"></i> <br />
+            <i class="menu-item-icon icon-projects"></i> <br>
             项目
           </a>
         </li>
@@ -126,7 +126,7 @@
         
         <li class="menu-item menu-item-movies">
           <a href="/imdb250">
-            <i class="menu-item-icon icon-movies"></i> <br />
+            <i class="menu-item-icon icon-movies"></i> <br>
             电影
           </a>
         </li>
@@ -134,7 +134,7 @@
         
         <li class="menu-item menu-item-books">
           <a href="/reading">
-            <i class="menu-item-icon icon-books"></i> <br />
+            <i class="menu-item-icon icon-books"></i> <br>
             图书
           </a>
         </li>
@@ -142,8 +142,8 @@
         
         <li class="menu-item menu-item-about">
           <a href="/about">
-            <i class="menu-item-icon icon-about"></i> <br />
-            關於
+            <i class="menu-item-icon icon-about"></i> <br>
+            About
           </a>
         </li>
       
@@ -182,12 +182,12 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於 2013-05-18
+          Posted on 2013-05-18
         </span>
 
         
           <span class="post-category">
-            &nbsp; | &nbsp; 分類於
+            &nbsp; | &nbsp; In
             
               <a href="/categories/Python/">Python</a>
 
@@ -202,7 +202,7 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2013/05/18/Python Cookbook 1.6/#comments" >
+            <a href="/2013/05/18/Python Cookbook 1.6/#comments">
               <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/18/Python Cookbook 1.6/"></span>
             </a>
           </span>
@@ -217,24 +217,24 @@
       
 
       
-        <h1 id="本节内容">本节内容</h1><p>有时我们需要将一些小的字符串拼接成一个大的字符串。Python提供以下方法来实现这个功能：</p>
+        <p>#本节内容<br>有时我们需要将一些小的字符串拼接成一个大的字符串。Python提供以下方法来实现这个功能：</p>
 <ul>
 <li>用+操作符或者+=拼接</li>
 </ul>
-<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="annotation">small</span><span class="number">1</span> + <span class="annotation">small</span><span class="number">2</span> + <span class="string">' something '</span> + smaill<span class="number">3</span> + <span class="string">' yet more'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="keyword">small</span><span class="number">1</span> + <span class="keyword">small</span><span class="number">2</span> + <span class="string">' something '</span> + smaill<span class="number">3</span> + <span class="string">' yet more'</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>用和+操作完全等同但却更加漂亮和紧凑的reduce</li>
 </ul>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">import</span> <span class="literal">operator</span></span><br><span class="line">largeString = reduce(<span class="literal">operator</span>.add, pieces, <span class="string">''</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import <span class="keyword">operator</span></span><br><span class="line">largeString = reduce(<span class="keyword">operator</span>.<span class="keyword">add</span>, pieces, <span class="string">''</span>)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>用字符串格式化操作符%</li>
 </ul>
-<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="string">'%s%s something %s yet more'</span> % (<span class="annotation">small</span><span class="number">1</span>, <span class="annotation">small</span><span class="number">2</span>, <span class="annotation">small</span><span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="string">'%s%s something %s yet more'</span> % (<span class="keyword">small</span><span class="number">1</span>, <span class="keyword">small</span><span class="number">2</span>, <span class="keyword">small</span><span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>用字符串操作符join</li>
 </ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">largeString = <span class="string">''</span>.<span class="function"><span class="title">join</span><span class="params">(pieces)</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>虽然这4种方法都可以实现字符串合并的目地，但是由于字符串对象是无法改变的。任何对字符串的操作，包括字符串拼接都会产生一个新的字符串对象，而不是修改原有的对象。因为拼接N个字符串将涉及创建并丢弃N-1个中间结果。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">largeString</span> = <span class="string">''</span>.join(pieces)</span><br></pre></td></tr></table></figure>
+<p>#知识点<br>虽然这4种方法都可以实现字符串合并的目地，但是由于字符串对象是无法改变的。任何对字符串的操作，包括字符串拼接都会产生一个新的字符串对象，而不是修改原有的对象。因为拼接N个字符串将涉及创建并丢弃N-1个中间结果。</p>
 <p>如果有少量字符串（尤其是那些绑定到变量上的）需要拼接，甚至有时还需要添加一些额外的信息，此时最好使用字符串格式化操作符%。性能对这种操作完全不是一个问题。和使用多个+操作符相比，%具有更好地可读性也不必对非字符串调用str方法。另外还可以使用%s之外的其他格式制定符，这样可以实现更多的格式要求，比如浮点数转化为字符串的表示时，可以控制它的有效位数。</p>
 <p>如果有较多的字符串要拼接的话，性能就成了一个很现实的问题。此时应该使用join方法，join会把输入的字符串序列一口吞下，而无须产生子项之间的中间结果，还可以制定子项的连接字符。这是一种快速、整洁、优雅且兼具良好可读性的合并大字符串的方法。无论何时join都是最值得选择的方式。</p>
 
@@ -311,17 +311,17 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
+            Table Of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            本站概覽
+            Overview
           </li>
         </ul>
       
 
       <div class="site-overview">
         <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui" />
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui">
           <p class="site-author-name">Garrick Gui</p>
         </div>
         <p class="site-description motion-element"></p>
@@ -329,21 +329,21 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">34</span>
-              <span class="site-state-item-name">文章</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
               <span class="site-state-item-count">5</span>
-              <span class="site-state-item-name">分類</span>
+              <span class="site-state-item-name">categories</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">18</span>
-              <span class="site-state-item-name">標籤</span>
+              <span class="site-state-item-name">tags</span>
               </a>
           </div>
 
@@ -370,7 +370,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本节内容"><span class="nav-number">1.</span> <span class="nav-text">本节内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#知识点"><span class="nav-number">2.</span> <span class="nav-text">知识点</span></a></li></ol></div>
+              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -396,11 +396,11 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主題 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>

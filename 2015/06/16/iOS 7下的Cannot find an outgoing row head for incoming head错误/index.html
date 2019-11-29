@@ -1,36 +1,36 @@
 <!doctype html>
 <html class="theme-next use-motion theme-next-mist">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5">
 
 
 
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
-
-
-
-
-  <meta name="keywords" content="疑难杂症," />
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3">
 
 
 
 
+  <meta name="keywords" content="疑难杂症,">
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3">
 
 
 
@@ -94,31 +94,31 @@
         
         <li class="menu-item menu-item-home">
           <a href="/">
-            <i class="menu-item-icon icon-home"></i> <br />
-            首頁
+            <i class="menu-item-icon icon-home"></i> <br>
+            Home
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives">
-            <i class="menu-item-icon icon-archives"></i> <br />
-            歸檔
+            <i class="menu-item-icon icon-archives"></i> <br>
+            Archives
           </a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags">
-            <i class="menu-item-icon icon-tags"></i> <br />
-            標籤
+            <i class="menu-item-icon icon-tags"></i> <br>
+            Tags
           </a>
         </li>
       
         
         <li class="menu-item menu-item-projects">
           <a href="/projects">
-            <i class="menu-item-icon icon-projects"></i> <br />
+            <i class="menu-item-icon icon-projects"></i> <br>
             项目
           </a>
         </li>
@@ -126,7 +126,7 @@
         
         <li class="menu-item menu-item-movies">
           <a href="/imdb250">
-            <i class="menu-item-icon icon-movies"></i> <br />
+            <i class="menu-item-icon icon-movies"></i> <br>
             电影
           </a>
         </li>
@@ -134,7 +134,7 @@
         
         <li class="menu-item menu-item-books">
           <a href="/reading">
-            <i class="menu-item-icon icon-books"></i> <br />
+            <i class="menu-item-icon icon-books"></i> <br>
             图书
           </a>
         </li>
@@ -142,8 +142,8 @@
         
         <li class="menu-item menu-item-about">
           <a href="/about">
-            <i class="menu-item-icon icon-about"></i> <br />
-            關於
+            <i class="menu-item-icon icon-about"></i> <br>
+            About
           </a>
         </li>
       
@@ -182,12 +182,12 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於 2015-06-16
+          Posted on 2015-06-16
         </span>
 
         
           <span class="post-category">
-            &nbsp; | &nbsp; 分類於
+            &nbsp; | &nbsp; In
             
               <a href="/categories/iOS/">iOS</a>
 
@@ -202,7 +202,7 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/16/iOS 7下的Cannot find an outgoing row head for incoming head错误/#comments" >
+            <a href="/2015/06/16/iOS 7下的Cannot find an outgoing row head for incoming head错误/#comments">
               <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/16/iOS 7下的Cannot find an outgoing row head for incoming head错误/"></span>
             </a>
           </span>
@@ -220,7 +220,7 @@
         <p>由于公司的App新版本要适配iPhone 6和iPhone 6plus，就用Masonry将很多视图的布局换成了autolayout。由于模拟器和自己的机器都是iOS8，开发时没有出现什么特别难的问题(其实很多坑)。但是在测试时在iOS 7的设备上出现了一个匪夷所思的问题，某个页面在push一个新的页面时发生了崩溃。而这个问题坑了我两天=_=。</p>
 <p>错误日志会输出大量的和constraint有关的信息，最后跟着一句<br><code>internal error.  Cannot find an outgoing row head for incoming head UIView:0x189712b0.Width, which should never happen.</code>的话。should never happen 你妹啊，这么一大坨错误日志简直吓死爹了。看着这么不正经的log，我的第一反应就是Masonry作者你个坑货（巨巨对不起！）。然后就上网查啊，有没有和我一样倒霉的人啊。结果这是一个iOS 7的bug！</p>
 <p>Good job Apple, keep going.</p>
-<p>SO上有一个讨论这个bug的<a href="http://stackoverflow.com/questions/17688370/autolayout-removefromsuperview-removeconstraints-throws-exception-and-crashes/27284071#27284071" target="_blank" rel="external">问题</a>，下面有一个答案分析的比较详尽，大概意思就是可能触发这个crash的情景有两个：</p>
+<p>SO上有一个讨论这个bug的<a href="http://stackoverflow.com/questions/17688370/autolayout-removefromsuperview-removeconstraints-throws-exception-and-crashes/27284071#27284071" target="_blank" rel="noopener">问题</a>，下面有一个答案分析的比较详尽，大概意思就是可能触发这个crash的情景有两个：</p>
 <p><ol></ol></p>
 <p><li>constants设置的有问题，比如view1.left = view2.left + 20，而view2是nil。或者constants乘以了0。</li></p>
 <p><li>遇到了auto layout引擎关于浮点数失去精度的bug，遇到这种问题，你只要在输出的海量log里搜索<strong>e-</strong>，如果能搜到类似于-7.45058e-08这种超小的数，那就说明你中招了。</li><br></p>
@@ -299,17 +299,17 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
+            Table Of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            本站概覽
+            Overview
           </li>
         </ul>
       
 
       <div class="site-overview">
         <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui" />
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui">
           <p class="site-author-name">Garrick Gui</p>
         </div>
         <p class="site-description motion-element"></p>
@@ -317,21 +317,21 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">34</span>
-              <span class="site-state-item-name">文章</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
               <span class="site-state-item-count">5</span>
-              <span class="site-state-item-name">分類</span>
+              <span class="site-state-item-name">categories</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">18</span>
-              <span class="site-state-item-name">標籤</span>
+              <span class="site-state-item-name">tags</span>
               </a>
           </div>
 
@@ -358,7 +358,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目錄</p>
+              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -384,11 +384,11 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主題 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>

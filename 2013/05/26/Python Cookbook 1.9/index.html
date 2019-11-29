@@ -1,36 +1,36 @@
 <!doctype html>
 <html class="theme-next use-motion theme-next-mist">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5">
 
 
 
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
-
-
-
-
-  <meta name="keywords" content="Python Cookbook," />
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3">
 
 
 
 
+  <meta name="keywords" content="Python Cookbook,">
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3">
 
 
 
@@ -94,31 +94,31 @@
         
         <li class="menu-item menu-item-home">
           <a href="/">
-            <i class="menu-item-icon icon-home"></i> <br />
-            首頁
+            <i class="menu-item-icon icon-home"></i> <br>
+            Home
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives">
-            <i class="menu-item-icon icon-archives"></i> <br />
-            歸檔
+            <i class="menu-item-icon icon-archives"></i> <br>
+            Archives
           </a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags">
-            <i class="menu-item-icon icon-tags"></i> <br />
-            標籤
+            <i class="menu-item-icon icon-tags"></i> <br>
+            Tags
           </a>
         </li>
       
         
         <li class="menu-item menu-item-projects">
           <a href="/projects">
-            <i class="menu-item-icon icon-projects"></i> <br />
+            <i class="menu-item-icon icon-projects"></i> <br>
             项目
           </a>
         </li>
@@ -126,7 +126,7 @@
         
         <li class="menu-item menu-item-movies">
           <a href="/imdb250">
-            <i class="menu-item-icon icon-movies"></i> <br />
+            <i class="menu-item-icon icon-movies"></i> <br>
             电影
           </a>
         </li>
@@ -134,7 +134,7 @@
         
         <li class="menu-item menu-item-books">
           <a href="/reading">
-            <i class="menu-item-icon icon-books"></i> <br />
+            <i class="menu-item-icon icon-books"></i> <br>
             图书
           </a>
         </li>
@@ -142,8 +142,8 @@
         
         <li class="menu-item menu-item-about">
           <a href="/about">
-            <i class="menu-item-icon icon-about"></i> <br />
-            關於
+            <i class="menu-item-icon icon-about"></i> <br>
+            About
           </a>
         </li>
       
@@ -182,12 +182,12 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於 2013-05-26
+          Posted on 2013-05-26
         </span>
 
         
           <span class="post-category">
-            &nbsp; | &nbsp; 分類於
+            &nbsp; | &nbsp; In
             
               <a href="/categories/Python/">Python</a>
 
@@ -202,7 +202,7 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2013/05/26/Python Cookbook 1.9/#comments" >
+            <a href="/2013/05/26/Python Cookbook 1.9/#comments">
               <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/26/Python Cookbook 1.9/"></span>
             </a>
           </span>
@@ -217,24 +217,27 @@
       
 
       
-        <h1 id="本节内容">本节内容</h1><p>将translate方法做一个简单的闭包，用来简化其使用流程。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translator</span><span class="params">(frm=<span class="string">''</span>, to=<span class="string">''</span>, delete=<span class="string">''</span>, keep=None)</span>:</span></span><br><span class="line">	<span class="keyword">if</span> len(to) = <span class="number">1</span>:</span><br><span class="line">		to = to * len(frm)</span><br><span class="line">	trans = string.maketrans(frm, to)</span><br><span class="line">	<span class="keyword">if</span> keep <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">		allchars = string.maketrans(<span class="string">''</span>,<span class="string">''</span>)</span><br><span class="line">		delete = allchars.translate(allchars, keep.translate(allchars, delete))</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">translate</span><span class="params">(s)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> s.translate(trans, delete)</span><br><span class="line">	<span class="keyword">return</span> translate</span><br></pre></td></tr></table></figure>
+        <p>#本节内容</p>
+<p>将translate方法做一个简单的闭包，用来简化其使用流程。</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span><span class="built_in"> string</span></span><br><span class="line">def translator(frm=<span class="string">''</span>, <span class="keyword">to</span>=<span class="string">''</span>, <span class="keyword">delete</span>=<span class="string">''</span>, keep=None):</span><br><span class="line">	<span class="keyword">if</span> len(<span class="keyword">to</span>) = <span class="number">1</span>:</span><br><span class="line">		<span class="keyword">to</span> = <span class="keyword">to</span> * len(frm)</span><br><span class="line">	trans =<span class="built_in"> string</span>.maketrans(frm, <span class="keyword">to</span>)</span><br><span class="line">	<span class="keyword">if</span> keep <span class="literal">is</span><span class="built_in"> not</span> None:</span><br><span class="line">		allchars =<span class="built_in"> string</span>.maketrans(<span class="string">''</span>,<span class="string">''</span>)</span><br><span class="line">		<span class="keyword">delete</span> = allchars<span class="built_in">.translate</span>(allchars, keep<span class="built_in">.translate</span>(allchars, <span class="keyword">delete</span>))</span><br><span class="line">	def<span class="built_in"> translate</span>(s):</span><br><span class="line">		<span class="keyword">return</span> s<span class="built_in">.translate</span>(trans, <span class="keyword">delete</span>)</span><br><span class="line">	<span class="keyword">return</span><span class="built_in"> translate</span></span><br></pre></td></tr></table></figure>
 <p>选出指定集合的字符：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">digit_only = <span class="function"><span class="title">translator</span><span class="params">(keep=string.digits)</span></span></span><br><span class="line">print <span class="function"><span class="title">digit_only</span><span class="params">(<span class="string">'Chiris Perkins : 224-7992'</span>)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">digit_only = translator(<span class="attribute">keep</span>=string.digits)</span><br><span class="line"><span class="builtin-name">print</span> digit_only(<span class="string">'Chiris Perkins : 224-7992'</span>)</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2247992</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2247992</span></span><br></pre></td></tr></table></figure>
 <p>移除属于某字符集合的元素：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">no_digits = <span class="function"><span class="title">translator</span><span class="params">(delete=string.digits)</span></span></span><br><span class="line">print <span class="function"><span class="title">no_digits</span><span class="params">(<span class="string">'Chris Perkins : 224-7992'</span>)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">no_digits = <span class="keyword">translator</span>(<span class="keyword">delete</span>=<span class="keyword">string</span>.digits)</span><br><span class="line"><span class="keyword">print</span> no_digits(<span class="string">'Chris Perkins : 224-7992'</span>)</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chris <span class="string">Perkins :</span> -</span><br></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chris Perkins : -</span><br></pre></td></tr></table></figure>
 <p>用某个字符替换属于某指定集合的字符：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">digits_to_hash = <span class="function"><span class="title">translator</span><span class="params">(frm=string.digits, to=<span class="string">'#'</span>)</span></span></span><br><span class="line">print <span class="function"><span class="title">digits_to_hash</span><span class="params">(<span class="string">'Chris Perkins : 224-7992'</span>)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">digits_to_hash = translator(<span class="attribute">frm</span>=string.digits, <span class="attribute">to</span>=<span class="string">'#'</span>)</span><br><span class="line"><span class="builtin-name">print</span> digits_to_hash(<span class="string">'Chris Perkins : 224-7992'</span>)</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chris Perkins : <span class="comment">###-###</span><span class="comment">#</span></span><br></pre></td></tr></table></figure>
-<h1 id="知识点">知识点</h1><p>闭包(closure)就是一个“内层”的函数，由一个名字（变量）来指代，而这个名字对于“外层”包含它的函数而言，是本地变量。这种返回一个闭包的函数，可以叫做闭包工厂来强调它创建并返回闭包，而不是返回类或者类的实例。</p>
-<h1 id="例子">例子</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sayHello</span><span class="params">(title=<span class="string">''</span>,greeting=<span class="string">''</span>)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">adddetail</span><span class="params">(name)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> <span class="string">'Hello '</span>+title+name+<span class="string">'. '</span>+greeting</span><br><span class="line">	<span class="keyword">return</span> adddetail</span><br><span class="line"></span><br><span class="line">mr = sayHello(title=<span class="string">'Mr. '</span>)</span><br><span class="line"><span class="keyword">print</span> mr(<span class="string">'Gui'</span>)</span><br><span class="line"></span><br><span class="line">morning = sayHello(greeting=<span class="string">'Good morning!'</span>)</span><br><span class="line"><span class="keyword">print</span> morning(<span class="string">'Garrick'</span>)</span><br><span class="line"></span><br><span class="line">hello = sayHello(title=<span class="string">'Mr. '</span>,greeting=<span class="string">'Good day!'</span>)</span><br><span class="line"><span class="keyword">print</span> hello(<span class="string">'Gui'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chris Perkins : ###-####</span><br></pre></td></tr></table></figure>
+<p>#知识点</p>
+<p>闭包(closure)就是一个“内层”的函数，由一个名字（变量）来指代，而这个名字对于“外层”包含它的函数而言，是本地变量。这种返回一个闭包的函数，可以叫做闭包工厂来强调它创建并返回闭包，而不是返回类或者类的实例。</p>
+<p>#例子</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sayHello</span><span class="params">(title=<span class="string">''</span>,greeting=<span class="string">''</span>)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">adddetail</span><span class="params">(name)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> <span class="string">'Hello '</span>+title+name+<span class="string">'. '</span>+greeting</span><br><span class="line">	<span class="keyword">return</span> adddetail</span><br><span class="line"></span><br><span class="line">mr = sayHello(title=<span class="string">'Mr. '</span>)</span><br><span class="line"><span class="keyword">print</span> mr(<span class="string">'Gui'</span>)</span><br><span class="line"></span><br><span class="line">morning = sayHello(greeting=<span class="string">'Good morning!'</span>)</span><br><span class="line"><span class="keyword">print</span> morning(<span class="string">'Garrick'</span>)</span><br><span class="line"></span><br><span class="line">hello = sayHello(title=<span class="string">'Mr. '</span>,greeting=<span class="string">'Good day!'</span>)</span><br><span class="line"><span class="keyword">print</span> hello(<span class="string">'Gui'</span>)</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
-<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">Hello</span> <span class="variable">Mr</span>. <span class="variable">Gui</span>. </span><br><span class="line"><span class="variable">Hello</span> <span class="variable">Garrick</span>. <span class="variable">Good</span> <span class="function_or_atom">morning</span><span class="exclamation_mark">!</span></span><br><span class="line"><span class="variable">Hello</span> <span class="variable">Mr</span>. <span class="variable">Gui</span>. <span class="variable">Good</span> <span class="function_or_atom">day</span><span class="exclamation_mark">!</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hello Mr. Gui. </span><br><span class="line">Hello Garrick. Good morning!</span><br><span class="line">Hello Mr. Gui. Good day!</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -308,17 +311,17 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
+            Table Of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            本站概覽
+            Overview
           </li>
         </ul>
       
 
       <div class="site-overview">
         <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui" />
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Garrick Gui">
           <p class="site-author-name">Garrick Gui</p>
         </div>
         <p class="site-description motion-element"></p>
@@ -326,21 +329,21 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">34</span>
-              <span class="site-state-item-name">文章</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
               <span class="site-state-item-count">5</span>
-              <span class="site-state-item-name">分類</span>
+              <span class="site-state-item-name">categories</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">18</span>
-              <span class="site-state-item-name">標籤</span>
+              <span class="site-state-item-name">tags</span>
               </a>
           </div>
 
@@ -367,7 +370,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本节内容"><span class="nav-number">1.</span> <span class="nav-text">本节内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#知识点"><span class="nav-number">2.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例子"><span class="nav-number">3.</span> <span class="nav-text">例子</span></a></li></ol></div>
+              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -393,11 +396,11 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主題 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
