@@ -228,7 +228,7 @@
 <p>3 解压dropbox，注意解压出来的是隐藏文件夹<strong>.dropbox-dist</strong></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tar</span> <span class="selector-tag">xzvf</span> <span class="selector-tag">dropbox</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></span><br></pre></td></tr></table></figure>
 <p>第一次运行生成host_id</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.dropbox-dist/</span>dropboxd &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.dropbox-dist/</span>dropboxd &amp;</span><br></pre></td></tr></table></figure>
 <p>运行之后终端会不断输出用来将dropbox和你的VPS进行绑定的url</p>
 <p>{<1>}<img src="http://gandl.qiniudn.com/dropboxbindvps.png" alt="绑定url"></1></p>
 <p>复制url在浏览器打开，然后输入你的dropbox帐号和密码完成绑定。</p>
@@ -236,7 +236,7 @@
 <p>dropbox会自动在你的主目录下创建一个<strong>Dropbox</strong>文件夹，通过ln软链接你所有要备份的目录来进行备份。为了方便我备份了整个ghost文件夹。。。</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~<span class="string">/Dropbox/</span></span><br><span class="line">ln -s ~<span class="string">/software/ghost/</span></span><br></pre></td></tr></table></figure>
 <p>然后开始执行同步</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.dropbox-dist/</span>dropboxd &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.dropbox-dist/</span>dropboxd &amp;</span><br></pre></td></tr></table></figure>
 <p>一会儿就同步完啦</p>
 <p>5 注意到现在为止开启的都是自动同步，dropbox是一直运行的。同步会占用很大的内存，所以我们要添加一个同步任务，只在半夜人少的时候同步</p>
 <p>先杀掉同步进程</p>
